@@ -65,3 +65,20 @@ main{
     box-shadow: 0px 3px 0px, 0px 0px 7px black;
     border-radius:10px;
 }
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3em;
+    padding-left:0.5em;
+    padding-right:0.5em;
+    padding-top:0.25em;
+    padding-bottom:0.25em;
+    line-height:normal;
+}
+nav ul li a:link {
+    color:white;
+    font-size:28px;
+    background: blue;
+    border-radius:10px;
+}
