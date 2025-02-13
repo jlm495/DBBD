@@ -92,7 +92,7 @@ main{
 }
 
 figure{
-    margin-top:-350px;
+    margin-top:-250px;
 }
 
 figure img{
@@ -121,9 +121,14 @@ nav ul li a:link {
 }
 
 nav ul li a:hover{
-    color:gray;
+    color:black;
+    background:white;
 }
 
+nav ul li a.currentPage{
+    background-color:white;
+    color:black;
+}
 
 #redbike{
     margin-top:0;
@@ -131,7 +136,7 @@ nav ul li a:hover{
 }
 
 #bluebike{
-    margin-top:150px;
+    margin-top:50px;
     margin-left:500px;
     margin-bottom:-75px;
 }
