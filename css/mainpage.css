@@ -140,3 +140,12 @@ nav ul li a.currentPage{
     margin-left:500px;
     margin-bottom:-75px;
 }
+
+#bgToggle{
+    background:none;
+    border:none;
+}
+
+#bgToggle:hover{
+    cursor:pointer;
+}
