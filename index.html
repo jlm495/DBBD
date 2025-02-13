@@ -13,7 +13,10 @@
 <div class="container">
     <header>
         <h1 class="sr-only">Dirt Bike Break Down Main Page</h1>
-        <img src="./img/DBBD_banner.jpg" id="banner">
+        <span aria-hidden=true>
+            <img src="./img/DBBD_banner.jpg" id="banner">
+            <img src="./img/DBBD_banner_smaller.jpg" id="smallBanner" class="sr-only">
+        </span>
     </header>
     
     <nav id="navbar">
@@ -34,8 +37,10 @@
         </section>
         <section id="hosts">
             <h2>Meet Your Hosts</h2>
-            <img src="./img/DBBD_blueBike.png" id="bluebike">
-            <img src="./img/DBBD_redBike.png" id="redbike">
+            <span aria-hidden=true class="bikes">
+                <img src="./img/DBBD_blueBike.png" id="bluebike">
+                <img src="./img/DBBD_redBike.png" id="redbike">
+            </span>
             <figure>
                 <img src="./img/us.jpg" alt="three women wearing dirt bike gear" id="us">
                 <figcaption>Jordan, Shawna, and Jenna Mandel</figcaption>
