@@ -91,9 +91,13 @@ main{
     margin: auto 100px;
 }
 
-figure #us{
+figure{
+    margin-top:-350px;
+}
+
+figure img{
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
-    border-radius:10px;
+    border-radius:10px;   
 }
 
 nav ul li a{
@@ -118,4 +122,16 @@ nav ul li a:link {
 
 nav ul li a:hover{
     color:gray;
+}
+
+
+#redbike{
+    margin-top:0;
+    margin-left:800px;
+}
+
+#bluebike{
+    margin-top:150px;
+    margin-left:500px;
+    margin-bottom:-75px;
 }
