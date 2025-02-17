@@ -61,6 +61,7 @@ nav{
     align-items:center;
     justify-content:space-between;
     padding:1rem;
+    z-index:10;
 }
 
 nav ul{
@@ -130,6 +131,18 @@ nav ul li a.currentPage{
     color:black;
 }
 
+nav ul li a:visited{
+
+    background:black;
+    color:white;
+}
+
+nav ul li a.currentPage:visited{
+
+    background: white;
+    color:black;
+}
+
 #redbike{
     margin-top:0;
     margin-left:800px;
@@ -150,7 +163,82 @@ nav ul li a.currentPage{
     cursor:pointer;
 }
 
-@media screen and (max-width:1530px){
+ul#episodesList li{
+    list-style:none;
+    font-size: 1.5em;
+    margin-top: 50px;
+    margin-left: 14vw;
+    z-index:9;
+}
+
+ul#episodesList{
+    text-align:left;
+    margin-top:-875px;
+    z-index:9;
+}
+
+ul#episodesList li a:link{
+    text-decoration: none;
+    border: 3px dashed black;
+    padding:0px 5px;
+    color:blueviolet;
+    z-index: 9;
+}
+
+ul#episodesList li a:hover{
+    border: 3px solid black;
+    font-size:1.2em;
+    z-index: 9;
+}
+
+h2#episodesPageTitle{
+
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#blueTire{
+
+    /*margin-top:-450px;*/
+    /*top:475px;
+    left:175px;*/
+    position:relative;
+    left:-50px;
+}
+
+#flag{
+    position:relative;
+    /*top:750px;
+    right:200px;*/
+    right:-600px;
+    top:250px;
+}
+
+#helmet{
+    position: relative;
+    /*top:775px;
+    left:300px;*/
+    top:250px;
+    left:-450px;
+    z-index:1;
+}
+
+#corner{
+    position:relative;
+    /*top:375px;
+    right:75px;*/
+    max-width:800px;
+    right:-400px;
+    top:-350px;
+}
+
+.bikes{
+    z-index:-1;
+}
+
+
+@media screen and (max-width:1200px){
     .container{
         max-width:90vw;
         grid-template-columns:
@@ -191,10 +279,25 @@ nav ul li a.currentPage{
         max-width:90vw;
     }
 
+    ul#episodesList li{
+        list-style:none;
+        font-size: 1.4em;
+        margin-top: 50px;
+        margin-left: 5vw;
+    }
+
+    ul#episodesList{
+        margin-top: 50px;
+    }
+
+    ul#episodesList li a:hover{
+        font-size:1.0em;
+    }
+
 }
 
 @media screen
-and (max-width: 764px){
+and (max-width: 800px){
     .container {
         border:none;
         box-shadow:none;
