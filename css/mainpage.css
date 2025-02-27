@@ -2,18 +2,19 @@
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 100px;
     display: grid;
     /*width: 100vw;*/
     /*height:100vh;*/
     border: 1px solid black;
-    padding: 20px;
+    padding: 20px; /* 20px */
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
     grid-template-columns:
     1fr        2fr      1fr;
     grid-template-areas:
     "heady     heady    heady"
     "navvy     navvy    navvy"
-    "mainy     mainy    mainy"
+    "aside1     mainy    aside2"
     "footy     footy    footy";
 }
 
@@ -24,7 +25,7 @@ h2{
 }
 body{
     font-family:'Nunito';
-    font-size: 1.2em;
+    font-size: 12pt;
 }
 
 
@@ -42,7 +43,6 @@ nav ul li{
 nav{
     width:1200px;
     height:50px;
-    /*background-image: url("./img/DBBD_black_checker.jpg");*/
     background-image: url(../img/DBBD_blue_checkers.jpg);
     background-size: cover;
     background-position: center;
@@ -51,7 +51,6 @@ nav{
     border-radius:10px;
     text-align:center;
     margin-left:-19px;
-    /*margin-top:60px;*/
     box-shadow:0px 3px 0px, 0px 0px 7px black;
     grid-area:navvy;
     position:sticky;
@@ -89,7 +88,12 @@ header{
 main{
     grid-area:mainy;
     max-width:100ch;
-    margin: auto 100px;
+    /*margin: auto 100px;*/
+}
+
+main.noAsides{
+    margin-left:-200px;
+    margin-bottom:50px;
 }
 
 figure{
@@ -122,6 +126,11 @@ nav ul li a:link {
 }
 
 nav ul li a:hover{
+    color:black;
+    background:white;
+}
+
+nav ul li.pages a:hover{
     color:black;
     background:white;
 }
@@ -166,15 +175,25 @@ nav ul li a.currentPage:visited{
 ul#episodesList li{
     list-style:none;
     font-size: 1.5em;
-    margin-top: 50px;
-    margin-left: 14vw;
+   /* margin-top: 50px;
+    margin-left: 14vw;*/
+    margin-left:-40px;
+    position:relative;
+    padding:5px;
+    margin-bottom:40px;
+    /*margin-left:-40px;*/
     z-index:9;
+    /*background-image:url(../img/DBBD\ -\ Episodes\ Page.svg);
+    background-size:contain;
+    background-position: center;*/
+
 }
 
 ul#episodesList{
-    text-align:left;
-    margin-top:-875px;
+    text-align:center;
+    margin-top:-425px;
     z-index:9;
+    margin-left:-125px;
 }
 
 ul#episodesList li a:link{
@@ -196,46 +215,66 @@ h2#episodesPageTitle{
     border: 2px solid black;
     padding: 10px;
     text-align: center;
+    margin-left:-100px;
 }
 
 #blueTire{
-
-    /*margin-top:-450px;*/
-    /*top:475px;
-    left:175px;*/
-    position:relative;
-    left:-50px;
+    margin-top:100px;
+    margin-left:30px;
 }
 
 #flag{
     position:relative;
-    /*top:750px;
-    right:200px;*/
-    right:-600px;
-    top:250px;
+    margin-top:-200px;
+    margin-bottom:30px;
+    margin-left:-75px;
+    z-index:0;
 }
 
 #helmet{
-    position: relative;
-    /*top:775px;
-    left:300px;*/
-    top:250px;
-    left:-450px;
     z-index:1;
+    margin-top:70px;
+    margin-left:40px;
+    width:150px;
 }
 
 #corner{
+    width:700px;
     position:relative;
-    /*top:375px;
-    right:75px;*/
-    max-width:800px;
-    right:-400px;
-    top:-350px;
+    margin-left:-400px;
+    z-index:0;
 }
 
+.aside1{
+    grid-area:aside1;
+}
+.aside2{
+    grid-area:aside2;
+}
+
+iframe{
+    border-radius: 24px;
+    border: black;
+    z-index:8;
+}
+
+ul p.activeDesc, ul p.activeDescTitle{
+    color:white;
+}
+
+#episodeBG{
+    z-index:-1;
+    width:840px;
+    margin-left:-100px;
+}
+
+ul#episodesList #transcript{
+    width:50px;
+}
 .bikes{
     z-index:-1;
 }
+
 
 
 @media screen and (max-width:1200px){
@@ -255,7 +294,7 @@ h2#episodesPageTitle{
         text-align:center;
     }
 
-    .bikes{
+    /*.bikes{
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -265,7 +304,7 @@ h2#episodesPageTitle{
         position: absolute;
         white-space: nowrap;
         width: 1px;
-    }
+    }*/
 
     figure{
         margin-top:30px;
