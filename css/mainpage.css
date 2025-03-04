@@ -198,18 +198,18 @@ ul#episodesList{
 
 ul#episodesList li a:link{
     text-decoration: none;
-    border: 3px dashed black;
+    /*border: 3px dashed black;*/
     padding:0px 5px;
     color:blueviolet;
     z-index: 9;
 }
-
+/*
 ul#episodesList li a:hover{
     border: 3px solid black;
     font-size:1.2em;
     z-index: 9;
 }
-
+*/
 h2#episodesPageTitle{
 
     border: 2px solid black;
@@ -242,7 +242,7 @@ h2#episodesPageTitle{
     width:700px;
     position:relative;
     margin-left:-400px;
-    z-index:0;
+    z-index:-1;
 }
 
 .aside1{
@@ -262,24 +262,54 @@ ul p.activeDesc, ul p.activeDescTitle{
     color:white;
 }
 
+ul p.activeDesc{
+    color:white;
+    margin-top:-40px;
+}
+
 #episodeBG{
     z-index:-1;
     width:840px;
-    margin-left:-100px;
+    margin-left:-125px;
 }
 
-ul#episodesList #transcript{
-    width:50px;
-}
 .bikes{
     z-index:-1;
 }
 
+ul#episodesList li.inactiveDescTitle{
+    margin-top:100px;
+}
+
+ul#episodesList p.inactiveDesc{
+    text-align: left;
+    max-width:75ch;
+    margin-top:-30px;
+    margin-right:-50px;
+}
+
+ul#episodesList ul#media{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:space-evenly;
+    margin-top:-20px;
+}
+
+
+.icon{
+    width:35px;
+}
+
+.banner{
+    margin-left:-10vw;
+}
 
 
 @media screen and (max-width:1200px){
     .container{
         max-width:90vw;
+        border:none;
+        box-shadow:none;
         grid-template-columns:
             1fr     1fr;
         grid-template-areas:
@@ -288,13 +318,16 @@ ul#episodesList #transcript{
             "mainy   mainy"
             "footy  footy";
     }
+    main.noAsides{
+        margin-left:0px;
+    }
 
     nav{
         width:90vw;
         text-align:center;
     }
 
-    /*.bikes{
+    .bikes{
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -304,13 +337,13 @@ ul#episodesList #transcript{
         position: absolute;
         white-space: nowrap;
         width: 1px;
-    }*/
+    }
 
     figure{
         margin-top:30px;
     }
 
-    #banner{
+    .banner{
         max-width:90vw;
     }
 
@@ -322,17 +355,51 @@ ul#episodesList #transcript{
         list-style:none;
         font-size: 1.4em;
         margin-top: 50px;
-        margin-left: 5vw;
     }
 
     ul#episodesList{
-        margin-top: 50px;
+        /*margin-left:100px;*/
+        margin-left:-5vw;
+        
+    }
+    #episodeBG{
+       /* margin-left:125px;*/
+       margin-left:5vw;  
     }
 
-    ul#episodesList li a:hover{
-        font-size:1.0em;
+    h2#episodesPageTitle{
+        /*margin-left:125px;*/
+        /*margin-left:-3vw;*/
+        width:90vw;
+        margin-left:-1.5vw;
     }
 
+    ul#episodesList ul#media{
+        margin-top:-75px;
+        
+    }
+
+    ul#episodesList p.inactiveDesc{
+        max-width:75ch;
+        text-align:left;
+        padding-left:7vw;
+        width:75vw;
+    }
+
+}
+
+@media screen and (max-width:1024px){
+
+    #episodeBG{
+        margin-left:3vw;
+    }
+}
+
+@media screen and (max-width:930px){
+
+    #episodeBG{
+        margin-left:-3vw;
+    }
 }
 
 @media screen
@@ -340,7 +407,7 @@ and (max-width: 800px){
     .container {
         border:none;
         box-shadow:none;
-        max-width:100vw;
+        max-width:90vw;
         margin:none;
         margin-left:0;
         grid-template-columns:
@@ -374,7 +441,7 @@ and (max-width: 800px){
         margin-left:0;
         margin-right:0;
         padding:40px;
-        padding-bottom:30px;
+        padding-bottom:13vw;
     }
 
     nav ul li a:link {
@@ -382,7 +449,7 @@ and (max-width: 800px){
         font-size:18pt;
         background: black;
         border-radius:10px;
-        padding:30px;
+        padding:10vw;
     }
     nav ul li a.currentPage{
         background-color:white;
@@ -391,9 +458,10 @@ and (max-width: 800px){
     #bgToggle{
         margin-left:50px;
         margin-bottom:-140px;
-        margin-top:-40px;
+        margin-top:-60px;
+        width:50vw;
     }
-    #banner{
+    .banner{
         margin-left:0vw;
     }
 
@@ -401,10 +469,65 @@ and (max-width: 800px){
         margin:0;
         max-width:90vw;
     }
+   
     figure img{
         max-width:90vw;
     }
     figure{
         margin-left:-10px;
     }
+    iframe{
+        width:50vw;
+    }
+    
+    #episodeBG{
+        margin-left:-10vw;
+        width:110vw;
+    }
+
+    .icon{
+        width:5vw;
+    }
+
+    ul#episodesList{
+        margin-top:-55vw;
+    }
+}
+
+@media screen
+and (max-width: 700px){
+    #episodeBG{
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    ul#episodesList{
+        margin-top:0;
+    }
+
+    ul#episodesList ul#media{
+        background:black;
+        box-sizing: content-box;
+        border-radius: 12px;
+        padding-top:250px;
+        margin-top:-300px;
+    }
+
+    .container{
+        width:90vw;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    iframe{
+        min-width:200px;
+    }
+
 }
