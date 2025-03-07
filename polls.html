@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dirt Bike Break Down - Home</title>
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/mainpage.css" rel="stylesheet">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="sr-only">Dirt Bike Break Down Main Page</h1>
+        <span aria-hidden=true>
+            <img src="./img/DBBD_banner.jpg" class="banner">
+        </span>
+    </header>
+    
+    <nav id="navbar">
+        <h2 class="sr-only">main navigation</h2>
+        <button id="bgToggle"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
+        <ul>
+            <li class="pages"><a href="./index.html">Home</a></li>
+            <li class="pages"><a href="./episodes.html">Episodes</a></li>
+            <li><a href="http://" class="currentPage">More Fun</a></li>
+        </ul>
+    </nav>
+
+    <main class="noAsides">
+        <div class="poll-container" role="region" aria-labelledby="poll-heading">
+            <h2 id="poll-heading">What's your favorite programming language?</h2>
+            
+            <div id="already-voted-message" class="already-voted-message" role="alert">
+                You've already voted in this poll. Thank you for your participation!
+            </div>
+            
+            <form id="poll-form">
+                <fieldset>
+                    <legend>Select one option:</legend>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="option1" name="poll" value="javascript">
+                        <label for="option1">JavaScript</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="option2" name="poll" value="python">
+                        <label for="option2">Python</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="option3" name="poll" value="java">
+                        <label for="option3">Java</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="option4" name="poll" value="php">
+                        <label for="option4">PHP</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="option5" name="poll" value="other">
+                        <label for="option5">Other</label>
+                    </div>
+                    
+                    <div class="error-message" id="error-message" role="alert"></div>
+                    
+                    <button type="submit" class="poll-submit" id="submit-button">
+                        Vote
+                        <span id="loading-indicator" class="loading" style="display: none;"></span>
+                    </button>
+                </fieldset>
+            </form>
+            
+            <div id="poll-results" aria-live="polite">
+                <h3 class="results-heading">Poll Results</h3>
+                <div id="results-container"></div>
+            </div>
+        </div>
+</body>
+</html>
