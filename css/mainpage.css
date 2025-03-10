@@ -844,6 +844,8 @@ and (max-width: 800px){
 
     div#mediaContainer{
         width:100vw;
+        margin-left:-130px;
+        padding-left:70px;
     }
    
 }
