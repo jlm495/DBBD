@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fredericka+the+Great&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fredericka+the+Great&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oxygen:wght@300;400;700&display=swap');
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -24,11 +24,25 @@ h2{
     margin-top:40px;
 }
 body{
-    font-family:'Nunito';
+    font-family:'Oxygen';
     font-size: 12pt;
 }
 
-
+    /* Skip link */
+    .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #3498db;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+    }
+    
+    .skip-link:focus {
+        top: 0;
+    }
 h3{
     font-family:'Delicious Handrawn';
     font-size:24pt;
@@ -80,6 +94,14 @@ nav ul{
     width: 1px;
 }
 
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: flex;
+}
+
 header{
     grid-area:heady;
     text-align: center;
@@ -114,7 +136,7 @@ nav ul li a{
     padding-top:0.25em;
     padding-bottom:0.25em;
     line-height:normal;
-    font-family: monospace;
+    font-family: 'Oxygen';
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
 }
 nav ul li a:link {
@@ -150,6 +172,10 @@ nav ul li a.currentPage:visited{
 
     background: white;
     color:black;
+}
+
+.nav-toggle{
+    display:none;
 }
 
 #redbike{
@@ -191,9 +217,9 @@ ul#episodesList li{
 
 ul#episodesList{
     text-align:center;
-    margin-top:-425px;
+    /*margin-top:-425px;*/
     z-index:9;
-    margin-left:-125px;
+    margin-left:-165px;
 }
 
 ul#episodesList li a:link{
@@ -215,12 +241,20 @@ h2#episodesPageTitle{
     border: 2px solid black;
     padding: 10px;
     text-align: center;
-    margin-left:-100px;
+    margin-left:-150px;
 }
 
 #blueTire{
     margin-top:100px;
     margin-left:30px;
+}
+
+.aside1{
+    padding-right:150px;
+}
+
+.aside2{
+    padding-left:50px;
 }
 
 #flag{
@@ -229,6 +263,7 @@ h2#episodesPageTitle{
     margin-bottom:30px;
     margin-left:-75px;
     z-index:0;
+    width:200px;
 }
 
 #helmet{
@@ -241,8 +276,14 @@ h2#episodesPageTitle{
 #corner{
     width:700px;
     position:relative;
-    margin-left:-400px;
+    margin-left:-450px;
     z-index:-1;
+}
+
+div#mediaContainer{
+    text-align: center;
+    padding:0;
+    padding: 10px 90px;
 }
 
 .aside1{
@@ -285,7 +326,7 @@ ul#episodesList p.inactiveDesc{
     text-align: left;
     max-width:75ch;
     margin-top:-30px;
-    margin-right:-50px;
+    /*margin-right:-50px;*/
 }
 
 ul#episodesList ul#media{
@@ -311,6 +352,8 @@ ul#episodesList ul#media{
     padding: 25px;
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background:black;
+    color:white;
 }
 
 /* Form elements styling */
@@ -333,12 +376,19 @@ legend {
     margin-bottom: 12px;
     padding: 10px;
     border: 1px solid #e0e0e0;
-    border-radius: 4px;
+    border-radius: 12px;
     transition: background-color 0.2s;
 }
 
 .poll-option:hover {
     background-color: #f9f9f9;
+    color:black;
+}
+
+.poll-option input[type="radio"]:checked + label{
+    background:blueviolet;
+    padding:12px;
+    border-radius:12px;
 }
 
 .poll-option input[type="radio"] {
@@ -357,9 +407,9 @@ input[type="radio"]:focus + label {
 }
 /* Button styles */
 .poll-submit {
-    background-color: #4CAF50;
+    background-color: blueviolet;
     color: white;
-    border: none;
+    border: white dashed 3px;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 16px;
@@ -369,7 +419,8 @@ input[type="radio"]:focus + label {
 }
 
 .poll-submit:hover {
-    background-color: #45a049;
+    background-color: blueviolet;
+    border: white solid 3px;
 }
 
 .poll-submit:focus {
@@ -454,10 +505,98 @@ input[type="radio"]:focus + label {
     margin-bottom: 20px;
     display: none;
 }
+/* Mobile Menu Styles */
+.nav-toggle {
+    display: none;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top:5vh;
+    left:5vw;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    transition: background-color 0.3s ease;
+}
 
+.nav-toggle:hover, 
+.nav-toggle:focus {
+    background-color: #333;
+    outline: 2px solid white;
+}
 
+.nav-toggle-label {
+    margin-right: 10px;
+}
 
-@media screen and (max-width:1200px){
+.nav-toggle-icon {
+    display: inline-block;
+    width: 20px;
+    height: 14px;
+    position: relative;
+}
+
+.nav-toggle-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-toggle-icon span:nth-child(1) { top: 0; }
+.nav-toggle-icon span:nth-child(2) { top: 6px; }
+.nav-toggle-icon span:nth-child(3) { top: 12px; }
+
+/* Hamburger animation when open */
+.nav-toggle.open .nav-toggle-icon span:nth-child(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.nav-toggle.open .nav-toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.open .nav-toggle-icon span:nth-child(3) {
+    top: 6px;
+    transform: rotate(-45deg);
+}
+
+div#mediaContainer ul{
+    list-style: none;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    /*margin-left:-5vw;*/
+}
+
+div#mediaContainer{
+    color:white;
+    margin-left:-200px;
+    font-family:"Oxygen";
+    text-align:center;
+    background-image:url("../img/DBBD\ -\ Episodes\ Page.svg");
+    background-size: cover;
+    padding:50px;
+    padding-top:60px;
+}
+
+iframe{
+    margin-right:-40px;
+}
+
+@media screen and (max-width:1280px){
     .container{
         max-width:90vw;
         border:none;
@@ -538,6 +677,15 @@ input[type="radio"]:focus + label {
         width:75vw;
     }
 
+    div#mediaContainer{
+        /*width:50vw;*/
+        margin:0;
+        /*padding: 5vw 9vw;
+        backgroudn*/
+        padding-bottom:9vw;
+
+    }
+
 }
 
 @media screen and (max-width:1024px){
@@ -545,13 +693,19 @@ input[type="radio"]:focus + label {
     #episodeBG{
         margin-left:3vw;
     }
+    div#mediaContainer{
+        padding-bottom:90px;
+    }
 }
 
 @media screen and (max-width:930px){
 
-    #episodeBG{
-        margin-left:-3vw;
-    }
+   /* div#mediaContainer{
+        margin-left:-20vw;
+        width:100vw;
+        padding-top:90px;
+        padding-bottom:120px;
+    }*/
 }
 
 @media screen
@@ -571,48 +725,91 @@ and (max-width: 800px){
           "footy";
     }
 
-    nav{
-        flex-flow: column nowrap;
-        height:70vh;
-        width:90vw;
-        position:relative;
-        background:none;
-        margin:none;
-        justify-content: space-around;
-        align-items:center;
+    .nav-toggle {
+        display: flex;
+        margin: 1rem auto;
     }
-
-    nav ul{
-        display:flex;
-        flex-flow:column nowrap;
-        margin-bottom:-50px;
+    
+    .navbar {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-out;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        /*background-image: none !important; /* Override the background image */
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: 90;
     }
-
-    nav ul li{
-        margin-top:20px;
-        margin-left:0;
-        margin-right:0;
-        padding:40px;
-        padding-bottom:13vw;
+    
+    .navbar.active {
+        height: 500px;/*500px;*/
+        /*background-color: rgba(0, 0, 0, 0.9);*/
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+        overflow-y: auto;
     }
-
-    nav ul li a:link {
-        color:white;
-        font-size:18pt;
-        background: black;
-        border-radius:10px;
-        padding:10vw;
+    
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
     }
-    nav ul li a.currentPage{
-        background-color:white;
-        color:black;
+    
+    .navbar li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    #bgToggle{
-        margin-left:50px;
-        margin-bottom:-140px;
-        margin-top:-60px;
-        width:50vw;
+    
+    .navbar li:last-child {
+        border-bottom: none;
     }
+    
+    .navbar a {
+        display: block;
+        padding: 25px 0;
+        margin: 0;
+        width: 90%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .navbar a:hover,
+    .navbar a:focus {
+        background-color: rgba(255, 255, 255, 0.1);
+        outline: 2px solid white;
+    }
+    
+    /* Position the color wheel toggle for mobile */
+    #bgToggle {
+        position: absolute;
+        top: 10px;
+        right: 160px;
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+    }
+    
+    #bgToggle img {
+        width: 100px; /*100% */
+        height: auto;
+    }
+    
+    /* Add focus styles for accessibility */
+    .navbar a:focus {
+        outline: 2px solid white;
+    }
+    
     .banner{
         margin-left:0vw;
     }
@@ -628,12 +825,12 @@ and (max-width: 800px){
     figure{
         margin-left:-10px;
     }
-    iframe#stream{
+    /*iframe#stream{
         width:50vw;
-    }
+    }*/
     
     #episodeBG{
-        margin-left:-10vw;
+        /*margin-left:-10vw;*/
         width:110vw;
     }
 
@@ -641,9 +838,14 @@ and (max-width: 800px){
         width:5vw;
     }
 
-    ul#episodesList{
+    /*ul#episodesList{
         margin-top:-55vw;
+    }*/
+
+    div#mediaContainer{
+        width:100vw;
     }
+   
 }
 
 @media screen
@@ -663,27 +865,37 @@ and (max-width: 700px){
     ul#episodesList{
         margin-top:0;
     }
-
+    /*
     ul#episodesList ul#media{
         background:black;
         box-sizing: content-box;
         border-radius: 12px;
         padding-top:250px;
         margin-top:-300px;
+        width:90vw;
+    }*/
+
+    div#mediaContainer{
+        background:black;
+        color:white;
+        padding: 10px 10px;
+        width:fit-content;
+        /*margin-left:-10px;*/
+        font-family:"Oxygen";
+        text-align:center;
     }
 
     .container{
         width:90vw;
-        margin-left:auto;
-        margin-right:auto;
+       /* margin-left:auto;
+        margin-right:auto; */
     }
 
-    iframe#stream{
+    /*iframe#stream{
         min-width:200px;
-    }
+    }*/
 
     .poll-container {
         padding: 15px;
     }
-
 }

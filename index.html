@@ -10,6 +10,7 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 <div class="container">
     <header>
         <h1 class="sr-only">Dirt Bike Break Down Main Page</h1>
@@ -17,18 +18,18 @@
             <img src="./img/DBBD_banner.jpg" class="banner">
         </span>
     </header>
-    
-    <nav id="navbar">
-        <h2 class="sr-only">main navigation</h2>
-        <button id="bgToggle"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
+
+    <nav class="navbar" id="navbar">
+        <h2 class="sr-only">Main navigation</h2>
+        <button id="bgToggle" aria-label="Toggle navigation bar colors"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
         <ul>
             <li><a href="./index.html" class="currentPage">Home</a></li>
             <li class="pages"><a href="./episodes.html">Episodes</a></li>
-            <li class="pages"><a href="http://">More Fun</a></li>
+            <li class="pages"><a href="./polls.html">More Fun</a></li>
         </ul>
     </nav>
 
-    <main class="noAsides">
+    <main class="noAsides" id="main-content">
         <section id="intro">
             <h2>What is Dirt Bike Break Down?</h2>
             <p>We've all seen those dirt bike scenes in movies and TV that make riders roll their eyes - unrealistic jumps, impossible stunts, and cringe-worthy riding techniques. Dirt Bike Break Down is the podcast and video series that will fearlessly dissect every dirt bike moment on screen. Hosted by my sisters and me, we'll bring the real rider's perspective to Hollywood's two-wheeled adventures, with an interactive website where fans can submit their favorite (and most ridiculous) scenes, vote on the biggest cliches, and more. Track or trails, blockbuster or indie film - no dirt bike scene is safe!</p>

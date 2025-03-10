@@ -18,7 +18,7 @@
         </span>
     </header>
     
-    <nav id="navbar">
+    <nav  class="navbar">
         <h2 class="sr-only">main navigation</h2>
         <button id="bgToggle"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
         <ul>
@@ -31,8 +31,8 @@
 
     <main>
         <h2 id="episodesPageTitle">Episode List</h2>
-        <span aria-hidden=true><img src="./img/DBBD - Episodes Page.svg" id="episodeBG"></span>
-        <ul id="episodesList">
+        <!--<span aria-hidden=true><img src="./img/DBBD - Episodes Page.svg" id="episodeBG"></span>-->
+        <div id="mediaContainer">
             <iframe class="stream" src="https://share.descript.com/embed/xtmUR7Fxla2" width="400" height="232" frameborder="3" allowfullscreen></iframe>
             <p class="activeDescTitle">1 - Motocrossed</p>
             <ul id="media">
@@ -41,6 +41,8 @@
                 <li><a href=""><img src="./img/spotifyLogo.png" alt="click to listen on spotify" class="icon" id="spotify"></a></li>
             </ul>
             <p class="activeDesc">In this episode, we review the old Disney movie, Motocrossed!</p>
+        </div>
+        <ul id="episodesList">
             <li class="inactiveDescTitle"><a href="http://">2 - MaveriX (Pt. 1)</a></li>
             <p class="inactiveDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nostrum, quibusdam ex officia exercitationem quas earum, ut assumenda temporibus quisquam quos natus, dolores ab laborum numquam obcaecati architecto soluta ullam!</p>
             <li class="inactiveDescTitle"><a href="http://">3 - Random Scenes from TV</a></li>
