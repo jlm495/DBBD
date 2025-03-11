@@ -241,7 +241,7 @@ h2#episodesPageTitle{
     border: 2px solid black;
     padding: 10px;
     text-align: center;
-    margin-left:-150px;
+    margin-left:-200px;
 }
 
 #blueTire{
@@ -284,13 +284,24 @@ div#mediaContainer{
     text-align: center;
     padding:0;
     padding: 10px 90px;
+    position:absolute;
+    top:500px;
+    width:750px;
+    z-index:-1;
+    left:735px;
 }
 
 .aside1{
     grid-area:aside1;
+    margin-left:-50px;
 }
 .aside2{
     grid-area:aside2;
+    margin-left:20px;
+}
+
+ul#episodesList{
+    margin-top:600px;
 }
 
 iframe#stream{
@@ -342,7 +353,7 @@ ul#episodesList ul#media{
 }
 
 .banner{
-    margin-left:-10vw;
+    margin-left:-5vw;
 }
 
 /* Poll container */
