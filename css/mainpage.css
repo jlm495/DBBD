@@ -284,11 +284,6 @@ div#mediaContainer{
     text-align: center;
     padding:0;
     padding: 10px 90px;
-    position:absolute;
-    top:500px;
-    width:750px;
-    z-index:-1;
-    left:735px;
 }
 
 .aside1{
@@ -297,11 +292,7 @@ div#mediaContainer{
 }
 .aside2{
     grid-area:aside2;
-    margin-left:20px;
-}
-
-ul#episodesList{
-    margin-top:600px;
+    padding-left:20px;
 }
 
 iframe#stream{
