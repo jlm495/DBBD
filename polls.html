@@ -18,19 +18,19 @@
         </span>
     </header>
     
-    <nav id="navbar">
-        <h2 class="sr-only">main navigation</h2>
-        <button id="bgToggle"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
+    <nav class="navbar" id="navbar">
+        <h2 class="sr-only">Main navigation</h2>
+        <button id="bgToggle" aria-label="Toggle navigation bar colors"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
         <ul>
-            <li class="pages"><a href="./index.html">Home</a></li>
+            <li><a href="./index.html" class="currentPage">Home</a></li>
             <li class="pages"><a href="./episodes.html">Episodes</a></li>
-            <li><a href="http://" class="currentPage">More Fun</a></li>
+            <li class="pages"><a href="./polls.html">More Fun</a></li>
         </ul>
     </nav>
 
     <main class="noAsides">
         <div class="poll-container" role="region" aria-labelledby="poll-heading">
-            <h2 id="poll-heading">What's your favorite programming language?</h2>
+            <h2 id="poll-heading">What kind of rider are you?</h2>
             
             <div id="already-voted-message" class="already-voted-message" role="alert">
                 You've already voted in this poll. Thank you for your participation!
@@ -47,17 +47,17 @@
                     
                     <div class="poll-option">
                         <input type="radio" id="option2" name="poll" value="python">
-                        <label for="option2">Python</label>
+                        <label for="option2">Track</label>
                     </div>
                     
                     <div class="poll-option">
                         <input type="radio" id="option3" name="poll" value="java">
-                        <label for="option3">Java</label>
+                        <label for="option3">Trail</label>
                     </div>
                     
                     <div class="poll-option">
                         <input type="radio" id="option4" name="poll" value="php">
-                        <label for="option4">PHP</label>
+                        <label for="option4">Both</label>
                     </div>
                     
                     <div class="poll-option">
