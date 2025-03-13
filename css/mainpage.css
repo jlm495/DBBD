@@ -711,7 +711,7 @@ iframe{
 }
 
 @media screen
-and (max-width: 800px){
+and (max-width: 900px){
     .container {
         border:none;
         box-shadow:none;
@@ -867,7 +867,7 @@ and (max-width: 700px){
     }
 
     ul#episodesList{
-        margin-top:0;
+        margin-top:500px;
     }
     /*
     ul#episodesList ul#media{
@@ -882,12 +882,36 @@ and (max-width: 700px){
     div#mediaContainer{
         background:black;
         color:white;
-        padding: 10px 10px;
-        width:fit-content;
+        padding-top: 10px;
+        padding-bottom:10px;
+        padding-left:30px;
+        padding-right:40px;
+        width:min-content;
         /*margin-left:-10px;*/
         font-family:"Oxygen";
         text-align:center;
+        position:absolute;
+        top:250px;
+        left:100px;
+        border-radius:12px;
+
     }
+
+    div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
+        width:95vw;
+    }
+
+   /* iframe.stream{
+        margin-left:-8.5vw;
+    }
+
+    ul#media{
+        margin-left:-8.5vw;
+    }
+
+    .activeDescTitle{
+        margin-left:-3vw;
+    }*/
 
     .container{
         width:90vw;
