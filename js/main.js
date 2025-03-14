@@ -97,13 +97,13 @@ form.addEventListener('submit', function(event) {
     
     const selectedOption = document.querySelector('input[name="poll"]:checked');
     
-    if (!selectedOption) {
+    /*if (!selectedOption) {
         errorMessage.textContent = 'Please select an option before voting.';
         errorMessage.style.display = 'block';
         return;
-    }
+    }*/
     
-    errorMessage.style.display = 'none';
+    //errorMessage.style.display = 'none';
     const vote = selectedOption.value;
     
     // Create form data for the request
@@ -117,10 +117,10 @@ form.addEventListener('submit', function(event) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.error) {
+        /*if (data.error) {
             errorMessage.textContent = data.error;
             errorMessage.style.display = 'block';
-        } else if (data.success) {
+        }*/ if (data.success) { // was else if
             pollData = data.results;
             
             // Disable the form to prevent multiple votes
@@ -136,9 +136,9 @@ form.addEventListener('submit', function(event) {
             displayResults();
         }
     })
-    .catch(error => {
+    /*.catch(error => {
         console.error('Error submitting vote:', error);
         errorMessage.textContent = 'An error occurred. Please try again.';
         errorMessage.style.display = 'block';
-    });
+    });*/
 });
