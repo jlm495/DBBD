@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 let pollData = {};
-
+const form = document.querySelector('#poll-form');
 // Fetch current results on page load
 fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
     .then(response => response.json())
@@ -92,7 +92,6 @@ fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
     })
     .catch(error => console.error('Error fetching results:', error));
 
-// Replace the form submission handler with:
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     
