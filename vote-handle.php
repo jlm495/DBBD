@@ -1,5 +1,9 @@
 <?php
 header('Content-Type: application/json');
+header('Content-Type: application/json');
+header("Access-Control-Allow-Origin: https://jlm495.github.io");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
 
 // Prevent vote spam using IP and cookies (basic protection)
 session_start();
