@@ -207,7 +207,7 @@ form.addEventListener('submit', function(event) {
             submitButton.textContent = 'Thanks for voting!';
             
             // Mark as voted in local storage
-            localStorage.setItem('hasVoted', 'true');
+            //localStorage.setItem('hasVoted', 'true');
             
             // Show the results
             displayResults();
