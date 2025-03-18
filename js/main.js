@@ -184,22 +184,10 @@ form.addEventListener('submit', function(event) {
     loadingIndicator.style.display = 'inline-block';
     submitButton.disabled = true;
     
-    // Create form data for the request
-    const formData = new FormData();
-    formData.append('vote', vote);
+    // Use JSONP to submit vote
+    const voteUrl = `https://dirtbikebreakdownpoll.rf.gd/vote-handle-jsonp.php?vote=${vote}`;
     
-    // Send the vote to the server
-    fetch('https://dirtbikebreakdownpoll.rf.gd/vote-handle.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
+    fetchJSONP(voteUrl, function(data) {
         loadingIndicator.style.display = 'none';
         
         if (data.error) {
@@ -224,16 +212,8 @@ form.addEventListener('submit', function(event) {
             // Show the results
             displayResults();
         }
-    })
-    .catch(error => {
-        loadingIndicator.style.display = 'none';
-        console.error('Error submitting vote:', error);
-        errorMessage.textContent = 'An error occurred. Please try again.';
-        errorMessage.style.display = 'block';
-        submitButton.disabled = false;
     });
 });
-
 // Initialize the poll
 document.addEventListener('DOMContentLoaded', function() {
     checkAlreadyVoted();
