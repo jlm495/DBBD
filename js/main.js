@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
 let pollData = {};
 const form = document.querySelector('#poll-form');
 // Fetch current results on page load
+
+
 fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
     .then(response => response.json())
     .then(data => {
@@ -91,6 +93,17 @@ fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
         }
     })
     .catch(error => console.error('Error fetching results:', error));
+
+    /*fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));*/
+  
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
