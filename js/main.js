@@ -111,7 +111,7 @@ form.addEventListener('submit', function(event) {
     formData.append('vote', vote);
     
     // Send the vote to the server
-    fetch('https://dirtbikebreakdownpoll.rf.gd/vote-handler.php', {
+    fetch('https://dirtbikebreakdownpoll.rf.gd/vote-handle.php', {
         method: 'POST',
         body: formData
     })
