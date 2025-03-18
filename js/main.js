@@ -80,44 +80,109 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Poll functionality
 let pollData = {};
 const form = document.querySelector('#poll-form');
-// Fetch current results on page load
+const errorMessage = document.getElementById('error-message');
+const submitButton = document.getElementById('submit-button');
+const resultsContainer = document.getElementById('results-container');
+const pollResults = document.getElementById('poll-results');
+const loadingIndicator = document.getElementById('loading-indicator');
+const alreadyVotedMessage = document.getElementById('already-voted-message');
 
+// Function to create a script tag for JSONP
+function fetchJSONP(url, callback) {
+    const callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+    window[callbackName] = function(data) {
+        delete window[callbackName];
+        document.body.removeChild(script);
+        callback(data);
+    };
 
-fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
-    .then(response => response.json())
-    .then(data => {
+    const script = document.createElement('script');
+    script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+    document.body.appendChild(script);
+}
+
+// Check if user has already voted
+function checkAlreadyVoted() {
+    const hasVoted = localStorage.getItem('hasVoted') === 'true';
+    if (hasVoted) {
+        alreadyVotedMessage.style.display = 'block';
+        form.style.display = 'none';
+        fetchAndDisplayResults();
+    } else {
+        alreadyVotedMessage.style.display = 'none';
+        pollResults.style.display = 'none'; // Hide results until after voting
+    }
+}
+
+// Display poll results
+function displayResults() {
+    if (!pollData || Object.keys(pollData).length === 0) {
+        resultsContainer.innerHTML = '<p>No results available at this time.</p>';
+        return;
+    }
+    
+    // Calculate total votes
+    let totalVotes = 0;
+    for (const option in pollData) {
+        totalVotes += parseInt(pollData[option]);
+    }
+    
+    // Generate result bars
+    let resultsHTML = '';
+    for (const option in pollData) {
+        const votes = pollData[option];
+        const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
+        
+        resultsHTML += `
+            <div class="result-item">
+                <div class="result-label">${option.charAt(0).toUpperCase() + option.slice(1)}: ${votes} votes (${percentage}%)</div>
+                <div class="result-bar-container">
+                    <div class="result-bar" style="width: ${percentage}%"></div>
+                </div>
+            </div>
+        `;
+    }
+    
+    resultsContainer.innerHTML = resultsHTML;
+    pollResults.style.display = 'block';
+}
+
+// Fetch current results
+function fetchAndDisplayResults() {
+    loadingIndicator.style.display = 'inline-block';
+    
+    fetchJSONP('https://dirtbikebreakdownpoll.rf.gd/get-results-jsonp.php', function(data) {
+        loadingIndicator.style.display = 'none';
         if (data.success) {
             pollData = data.results;
+            displayResults();
+        } else {
+            errorMessage.textContent = data.error || 'Error loading poll results.';
+            errorMessage.style.display = 'block';
         }
-    })
-    .catch(error => console.error('Error fetching results:', error));
-
-    /*fetch('https://dirtbikebreakdownpoll.rf.gd/get-results.php')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));*/
-  
-
+    });
+}
+// Submit vote
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     
     const selectedOption = document.querySelector('input[name="poll"]:checked');
     
-    /*if (!selectedOption) {
+    if (!selectedOption) {
         errorMessage.textContent = 'Please select an option before voting.';
         errorMessage.style.display = 'block';
         return;
-    }*/
+    }
     
-    //errorMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
     const vote = selectedOption.value;
+    
+    // Show loading indicator
+    loadingIndicator.style.display = 'inline-block';
+    submitButton.disabled = true;
     
     // Create form data for the request
     const formData = new FormData();
@@ -128,12 +193,20 @@ form.addEventListener('submit', function(event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
-        /*if (data.error) {
+        loadingIndicator.style.display = 'none';
+        
+        if (data.error) {
             errorMessage.textContent = data.error;
             errorMessage.style.display = 'block';
-        }*/ if (data.success) { // was else if
+            submitButton.disabled = false;
+        } else if (data.success) {
             pollData = data.results;
             
             // Disable the form to prevent multiple votes
@@ -145,13 +218,23 @@ form.addEventListener('submit', function(event) {
             submitButton.disabled = true;
             submitButton.textContent = 'Thanks for voting!';
             
+            // Mark as voted in local storage
+            localStorage.setItem('hasVoted', 'true');
+            
             // Show the results
             displayResults();
         }
     })
-    /*.catch(error => {
+    .catch(error => {
+        loadingIndicator.style.display = 'none';
         console.error('Error submitting vote:', error);
         errorMessage.textContent = 'An error occurred. Please try again.';
         errorMessage.style.display = 'block';
-    });*/
+        submitButton.disabled = false;
+    });
+});
+
+// Initialize the poll
+document.addEventListener('DOMContentLoaded', function() {
+    checkAlreadyVoted();
 });
