@@ -828,6 +828,11 @@ and (max-width: 900px){
 
     ul#episodesList{
         margin-left:-5vw;
+        margin-top:-50px;
+    }
+
+    .activeDescTitle{
+        font-size:20pt;
     }
    
 }
