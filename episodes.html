@@ -9,12 +9,12 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body>
-<div class="container">
+<div class="container" id="episodesContainer">
 
     <header>
         <h1 class="sr-only">Dirt Bike Break Down Episodes Page</h1>
         <span aria-hidden=true>
-            <img src="./img/DBBD_banner.jpg" class="banner">
+            <img src="./img/DBBD_banner.jpg" class="banner" id="episodesBanner">
         </span>
     </header>
     
@@ -29,9 +29,8 @@
         </ul>
     </nav>
 
-    <main>
+    <main id="episodesMain">
         <h2 id="episodesPageTitle">Episode List</h2>
-        <!--<span aria-hidden=true><img src="./img/DBBD - Episodes Page.svg" id="episodeBG"></span>-->
         <div id="mediaContainer">
             <iframe class="stream" src="https://share.descript.com/embed/xtmUR7Fxla2" width="400" height="232" frameborder="3" allowfullscreen></iframe>
             <p class="activeDescTitle">1 - Motocrossed</p>
@@ -44,25 +43,25 @@
         </div>
         <ul id="episodesList">
             <li class="inactiveDescTitle"><a href="http://">2 - MaveriX (Pt. 1)</a></li>
-            <p class="inactiveDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nostrum, quibusdam ex officia exercitationem quas earum, ut assumenda temporibus quisquam quos natus, dolores ab laborum numquam obcaecati architecto soluta ullam!</p>
+            <li class="inactiveDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nostrum, quibusdam ex officia exercitationem quas earum, ut assumenda temporibus quisquam quos natus, dolores ab laborum numquam obcaecati architecto soluta ullam!</li>
             <li class="inactiveDescTitle"><a href="http://">3 - Random Scenes from TV</a></li>
-            <p class="inactiveDesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis quod harum, neque fugiat molestiae dicta doloremque ipsa odio provident optio voluptate sapiente dolore, iure, earum cupiditate perspiciatis rerum explicabo nemo.</p>
+            <li class="inactiveDesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis quod harum, neque fugiat molestiae dicta doloremque ipsa odio provident optio voluptate sapiente dolore, iure, earum cupiditate perspiciatis rerum explicabo nemo.</li>
             <li class="inactiveDescTitle"><a href="http://">4 - The Dirt Bike Kid (1985)</a></li>
-            <p class="inactiveDesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nisi accusantium quas, sit cupiditate modi deleniti quisquam molestias ad nesciunt delectus dolorem vitae hic nemo, quidem ab quibusdam minima atque!</p>
+            <li class="inactiveDesc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nisi accusantium quas, sit cupiditate modi deleniti quisquam molestias ad nesciunt delectus dolorem vitae hic nemo, quidem ab quibusdam minima atque!</li>
             <li class="inactiveDescTitle"><a href="http://">5 - MaveriX (Pt. 2)</a></li>
-            <p class="inactiveDesc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus debitis aliquam fuga ab numquam excepturi nesciunt alias. Omnis perferendis libero iure nam architecto voluptatum distinctio, itaque facilis sint, accusamus eaque.</p>
+            <li class="inactiveDesc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus debitis aliquam fuga ab numquam excepturi nesciunt alias. Omnis perferendis libero iure nam architecto voluptatum distinctio, itaque facilis sint, accusamus eaque.</li>
             <li class="inactiveDescTitle"><a href="http://">6 - Charm City Kings (2020)</a></li>
-            <p class="inactiveDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium sapiente et excepturi animi amet, reiciendis facilis consequatur perferendis cum. Commodi enim magni labore ut autem accusantium dignissimos atque error.</p>
+            <li class="inactiveDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium sapiente et excepturi animi amet, reiciendis facilis consequatur perferendis cum. Commodi enim magni labore ut autem accusantium dignissimos atque error.</li>
         </ul>
     </main>
-    <aside class="aside1" aria-hidden=true>
+    <!--<aside class="aside1" aria-hidden=true>
         <img src="./img/blue_tire.png" id="blueTire" class="bikes">
         <img src="./img/orangeHelmet.png" id="helmet" class="bikes">
     </aside>
     <aside class="aside2" aria-hidden=true>
         <img src="./img/cornerSchematic.svg" id="corner" class="bikes">
         <img src="./img/flag.png" id="flag" class="bikes">
-    </aside>
+    </aside>-->
 </div>
     
 </body>

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fredericka+the+Great&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oxygen:wght@300;400;700&display=swap');
+
+/* All */
 .container{
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 100px;
     display: grid;
-    /*width: 100vw;*/
-    /*height:100vh;*/
     border: 1px solid black;
-    padding: 20px; /* 20px */
+    padding: 20px;
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
     grid-template-columns:
     1fr        2fr      1fr;
@@ -23,13 +23,13 @@ h2{
     font-size:24pt;
     margin-top:40px;
 }
+
 body{
     font-family:'Oxygen';
     font-size: 12pt;
 }
 
-    /* Skip link */
-    .skip-link {
+.skip-link {
     position: absolute;
     top: -40px;
     left: 0;
@@ -38,16 +38,50 @@ body{
     padding: 8px;
     z-index: 100;
     transition: top 0.3s;
-    }
-    
-    .skip-link:focus {
-        top: 0;
-    }
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 h3{
     font-family:'Delicious Handrawn';
     font-size:24pt;
 }
 
+header{
+    grid-area:heady;
+    text-align: center;
+    margin-top:-20px;
+}
+
+main{
+    grid-area:mainy;
+    max-width:100ch;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: flex;
+}
+
+
+/* Navigation */
 nav ul li{
     list-style: none;
     margin-left:50px;
@@ -82,50 +116,6 @@ nav ul{
     flex-flow: row nowrap;
     justify-content: space-around;
 }
-.sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
-.mobile-only {
-    display: none;
-}
-
-.desktop-only {
-    display: flex;
-}
-
-header{
-    grid-area:heady;
-    text-align: center;
-    margin-top:-20px;
-}
-main{
-    grid-area:mainy;
-    max-width:100ch;
-    /*margin: auto 100px;*/
-}
-
-main.noAsides{
-    margin-left:-200px;
-    margin-bottom:50px;
-}
-
-figure{
-    margin-top:-250px;
-}
-
-figure img{
-    box-shadow: 0px 1px 0px, 0px 0px 7px black;
-    border-radius:10px;   
-}
 
 nav ul li a{
     text-decoration: none;
@@ -139,6 +129,7 @@ nav ul li a{
     font-family: 'Oxygen';
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
 }
+
 nav ul li a:link {
     color:white;
     font-size:18pt;
@@ -178,6 +169,30 @@ nav ul li a.currentPage:visited{
     display:none;
 }
 
+#bgToggle{
+    background:none;
+    border:none;
+}
+
+#bgToggle:hover{
+    cursor:pointer;
+}
+
+/* main page */
+main.noAsides{
+    margin-left:-200px;
+    margin-bottom:50px;
+}
+
+figure{
+    margin-top:-250px;
+}
+
+figure img{
+    box-shadow: 0px 1px 0px, 0px 0px 7px black;
+    border-radius:10px;   
+}
+
 #redbike{
     margin-top:0;
     margin-left:800px;
@@ -189,59 +204,92 @@ nav ul li a.currentPage:visited{
     margin-bottom:-75px;
 }
 
-#bgToggle{
-    background:none;
-    border:none;
+/* Episodes page */
+
+div#mediaContainer{
+    color:white;
+    /*margin-left:-200px;*/
+    font-family:"Oxygen";
+    text-align:center;
+    background-image:url("../img/episodesBG.svg");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: 50%;
+    /*padding:50px;*/
+    padding-top:60px;
+    text-align: center;
+    /*padding:0px;*/
+    /*padding: 10px 90px;*/
+    display: grid;
+    place-items:center;
+    /*padding: 60px 150px;*/
+    padding: 40px 100px;
+    
 }
 
-#bgToggle:hover{
-    cursor:pointer;
-}
-
-ul#episodesList li{
-    list-style:none;
-    font-size: 1.5em;
-   /* margin-top: 50px;
-    margin-left: 14vw;*/
+div#mediaContainer ul{
+    list-style: none;
+    display:flex;
+    flex-flow: row;
+    flex-wrap:wrap;
+    place-content:center;
+    place-self:center;
+    place-items:center;
+    margin:0;
     margin-left:-40px;
+}
+
+#episodesContainer{
+    display:grid;
+    place-items:center;
+}
+
+.activeDescTitle{
+    font-size: 12pt;
+}
+
+#episodesMain{
+    display:grid;
+    place-items:center;
+}
+
+ul#episodesList li.inactiveDescTitle{
+    list-style:none;
+    font-size: 20pt;
+    /*margin-left:-40px;*/
     position:relative;
     padding:5px;
     margin-bottom:40px;
-    /*margin-left:-40px;*/
     z-index:9;
-    /*background-image:url(../img/DBBD\ -\ Episodes\ Page.svg);
-    background-size:contain;
-    background-position: center;*/
+    text-align:center;
+}
 
+ul#episodesList li.inactiveDesc{
+    list-style:none;
+    font-size:12pt;
+    text-align: left;
 }
 
 ul#episodesList{
     text-align:center;
-    /*margin-top:-425px;*/
     z-index:9;
-    margin-left:-165px;
+    /*margin-left:-165px;*/
+    margin-bottom:100px;
 }
 
 ul#episodesList li a:link{
     text-decoration: none;
-    /*border: 3px dashed black;*/
     padding:0px 5px;
     color:blueviolet;
     z-index: 9;
 }
-/*
-ul#episodesList li a:hover{
-    border: 3px solid black;
-    font-size:1.2em;
-    z-index: 9;
-}
-*/
+
 h2#episodesPageTitle{
 
     border: 2px solid black;
-    padding: 10px;
+    padding: 10px 200px;
     text-align: center;
-    margin-left:-150px;
+    /*margin-left:-150px;*/
 }
 
 #blueTire{
@@ -251,10 +299,13 @@ h2#episodesPageTitle{
 
 .aside1{
     padding-right:150px;
+    grid-area:aside1;
+    margin-left:-50px;
 }
 
 .aside2{
-    padding-left:50px;
+    padding-left:70px;
+    grid-area:aside2;
 }
 
 #flag{
@@ -279,43 +330,25 @@ h2#episodesPageTitle{
     margin-left:-450px;
     z-index:-1;
 }
-
-div#mediaContainer{
-    text-align: center;
-    padding:0;
-    padding: 10px 90px;
+/*
+iframe{
+    margin-right:-40px;
 }
-
-.aside1{
-    grid-area:aside1;
-    margin-left:-50px;
-}
-.aside2{
-    grid-area:aside2;
-    padding-left:20px;
-}
-
+*/
 iframe.stream{
     border-radius: 24px;
     border: black;
     z-index:8;
-    margin-right:-50px;
+    /*margin-right:-50px;*/
 }
-
+/*
 .activeDescTitle, .activeDesc{
     margin-right:-50px;
-}
+}*/
 
 ul p.activeDesc{
     color:white;
     margin-top:-40px;
-}
-
-
-#episodeBG{
-    z-index:-1;
-    width:840px;
-    margin-left:-125px;
 }
 
 .bikes{
@@ -330,26 +363,27 @@ ul#episodesList p.inactiveDesc{
     text-align: left;
     max-width:75ch;
     margin-top:-30px;
-    /*margin-right:-50px;*/
 }
 
-ul#episodesList ul#media{
+ul#media li{
+    padding: 0 10px;
+}
+
+ul#media{
     display:flex;
     flex-flow: row nowrap;
-    justify-content:space-evenly;
-    margin-top:-20px;
+    justify-content: space-evenly;
 }
-
 
 .icon{
     width:35px;
 }
 
-.banner{
+/*.banner{
     margin-left:-5vw;
-}
+}*/
 
-/* Poll container */
+/* Poll page */
 .poll-container {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -524,8 +558,9 @@ input[type="radio"]:focus + label {
     position: absolute;
     top:5vh;
     left:5vw;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: space-between;
+    place-content:center;
     width: 100px;
     transition: background-color 0.3s ease;
 }
@@ -577,30 +612,9 @@ input[type="radio"]:focus + label {
     transform: rotate(-45deg);
 }
 
-div#mediaContainer ul{
-    list-style: none;
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    /*margin-left:-5vw;*/
-}
-
-div#mediaContainer{
-    color:white;
-    margin-left:-200px;
-    font-family:"Oxygen";
-    text-align:center;
-    background-image:url("../img/DBBD\ -\ Episodes\ Page.svg");
-    background-size: cover;
-    padding:50px;
-    padding-top:60px;
-}
-
-iframe{
-    margin-right:-40px;
-}
-
 @media screen and (max-width:1280px){
+    
+    /* all */
     .container{
         max-width:90vw;
         border:none;
@@ -613,13 +627,19 @@ iframe{
             "mainy   mainy"
             "footy  footy";
     }
-    main.noAsides{
-        margin-left:0px;
-    }
 
     nav{
         width:90vw;
         text-align:center;
+    }
+
+    .banner{
+        max-width:100vw;
+    }
+    
+    /* main page */
+    main.noAsides{
+        margin-left:0px;
     }
 
     .bikes{
@@ -636,42 +656,27 @@ iframe{
 
     figure{
         margin-top:30px;
-    }
-
-    .banner{
         max-width:90vw;
     }
 
-    figure{
-        max-width:90vw;
-    }
-
-    ul#episodesList li{
+    /* episodes page */
+    /*ul#episodesList li{
         list-style:none;
         font-size: 1.4em;
         margin-top: 50px;
     }
 
     ul#episodesList{
-        /*margin-left:100px;*/
         margin-left:-5vw;
-        
     }
+
     #episodeBG{
-       /* margin-left:125px;*/
        margin-left:5vw;  
     }
 
     h2#episodesPageTitle{
-        /*margin-left:125px;*/
-        /*margin-left:-3vw;*/
         width:90vw;
         margin-left:-1.5vw;
-    }
-
-    ul#episodesList ul#media{
-        margin-top:-75px;
-        
     }
 
     ul#episodesList p.inactiveDesc{
@@ -682,34 +687,10 @@ iframe{
     }
 
     div#mediaContainer{
-        /*width:50vw;*/
         margin:0;
-        /*padding: 5vw 9vw;
-        backgroudn*/
         padding-bottom:9vw;
-
     }
-
-}
-
-@media screen and (max-width:1024px){
-
-    #episodeBG{
-        margin-left:3vw;
-    }
-    div#mediaContainer{
-        padding-bottom:90px;
-    }
-}
-
-@media screen and (max-width:930px){
-
-   /* div#mediaContainer{
-        margin-left:-20vw;
-        width:100vw;
-        padding-top:90px;
-        padding-bottom:120px;
-    }*/
+*/
 }
 
 @media screen
@@ -717,7 +698,7 @@ and (max-width: 900px){
     .container {
         border:none;
         box-shadow:none;
-        max-width:90vw;
+        max-width:95vw;
         margin:none;
         margin-left:0;
         grid-template-columns:
@@ -744,7 +725,6 @@ and (max-width: 900px){
         padding: 0;
         box-shadow: none;
         border: none;
-        /*background-image: none !important; /* Override the background image */
         background-size: contain;
         position: absolute;
         top: 0;
@@ -753,18 +733,24 @@ and (max-width: 900px){
     }
     
     .navbar.active {
-        height: 500px;/*500px;*/
-        /*background-color: rgba(0, 0, 0, 0.9);*/
+        height: 500px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         margin-bottom: 20px;
         overflow-y: auto;
+        display:grid;
+        place-items:center;
+        place-content:center;
+        place-self:center;
     }
     
     .navbar ul {
         flex-direction: column;
         padding: 0;
-        width: 100%;
+        width: 70vw;
+        place-items:center;
+        place-content:center;
+        place-self:center;
     }
     
     .navbar li {
@@ -783,7 +769,7 @@ and (max-width: 900px){
         display: block;
         padding: 25px 0;
         margin: 0;
-        width: 90%;
+        width: 95%; /*90%*/
         border-radius: 0;
         box-shadow: none;
     }
@@ -795,17 +781,17 @@ and (max-width: 900px){
     }
     
     /* Position the color wheel toggle for mobile */
-    #bgToggle {
+    /*#bgToggle {
         position: absolute;
         top: 10px;
         right: 160px;
         width: 40px;
         height: 40px;
         z-index: 100;
-    }
+    }*/
     
     #bgToggle img {
-        width: 100px; /*100% */
+        width: 100px;
         height: auto;
     }
     
@@ -815,7 +801,7 @@ and (max-width: 900px){
     }
     
     .banner{
-        margin-left:0vw;
+        margin:0;
     }
 
     main{
@@ -829,103 +815,66 @@ and (max-width: 900px){
     figure{
         margin-left:-10px;
     }
-    /*iframe#stream{
-        width:50vw;
-    }*/
-    
-    #episodeBG{
-        /*margin-left:-10vw;*/
-        width:110vw;
-    }
 
-    .icon{
+    /*.icon{
         width:5vw;
     }
-
-    /*ul#episodesList{
-        margin-top:-55vw;
-    }*/
 
     div#mediaContainer{
         width:100vw;
         margin-left:-130px;
         padding-left:70px;
+    }*/
+
+    ul#episodesList{
+        margin-left:-5vw;
     }
    
 }
 
 @media screen
 and (max-width: 700px){
-    #episodeBG{
-        border: 0;
-        clip: rect(0, 0, 0, 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
+    #episodesContainer{
+        max-width:90vw;
+        display:grid;
+        place-items:center;
+        place-content:center;
+        padding:0;
+        /*margin:-5vw;*/
     }
-
-    ul#episodesList{
-        margin-top:500px;
+    ul#nav-menu{
+        text-align:center;
+        place-items:center;
+        place-content: center;
+        place-self:center;
+        margin:0;
+        padding:0;
     }
-    /*
-    ul#episodesList ul#media{
-        background:black;
-        box-sizing: content-box;
-        border-radius: 12px;
-        padding-top:250px;
-        margin-top:-300px;
-        width:90vw;
-    }*/
-
     div#mediaContainer{
         background:black;
-        color:white;
-        padding-top: 10px;
-        padding-bottom:10px;
-        padding-left:30px;
-        padding-right:40px;
+        padding: 10px 30px;
         width:min-content;
-        /*margin-left:-10px;*/
         font-family:"Oxygen";
-        text-align:center;
-        position:absolute;
-        top:250px;
-        left:100px;
         border-radius:12px;
 
     }
+    h2#episodesPageTitle{
+        padding: 10px 30vw;
+    }
 
+    ul#episodesList li{
+        margin:0;
+    }
+/*
     div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
-        width:95vw;
+        max-width:95vw;
     }
-
-   /* iframe.stream{
-        margin-left:-8.5vw;
-    }
-
-    ul#media{
-        margin-left:-8.5vw;
-    }
-
-    .activeDescTitle{
-        margin-left:-3vw;
-    }*/
 
     .container{
         width:90vw;
-       /* margin-left:auto;
-        margin-right:auto; */
     }
-
-    /*iframe#stream{
-        min-width:200px;
-    }*/
 
     .poll-container {
         padding: 15px;
-    }
+    }*/
 }
