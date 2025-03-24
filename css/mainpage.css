@@ -245,7 +245,8 @@ div#mediaContainer ul{
 }
 
 .activeDescTitle{
-    font-size: 12pt;
+    font-size: 20pt;
+    margin:10px;
 }
 
 #episodesMain{
@@ -256,7 +257,6 @@ div#mediaContainer ul{
 ul#episodesList li.inactiveDescTitle{
     list-style:none;
     font-size: 20pt;
-    /*margin-left:-40px;*/
     position:relative;
     padding:5px;
     margin-bottom:40px;
@@ -273,7 +273,6 @@ ul#episodesList li.inactiveDesc{
 ul#episodesList{
     text-align:center;
     z-index:9;
-    /*margin-left:-165px;*/
     margin-bottom:100px;
 }
 
@@ -289,7 +288,10 @@ h2#episodesPageTitle{
     border: 2px solid black;
     padding: 10px 200px;
     text-align: center;
-    /*margin-left:-150px;*/
+}
+
+.activeDescTitle, .inactiveDescTitle{
+    font-family:'Delicious Handrawn';
 }
 
 #blueTire{
@@ -345,11 +347,6 @@ iframe.stream{
 .activeDescTitle, .activeDesc{
     margin-right:-50px;
 }*/
-
-ul p.activeDesc{
-    color:white;
-    margin-top:-40px;
-}
 
 .bikes{
     z-index:-1;
@@ -830,7 +827,7 @@ and (max-width: 900px){
         margin-left:-5vw;
         margin-top:-50px;
     }
-
+/* here! */
     .activeDescTitle{
         font-size:20pt;
     }
@@ -867,7 +864,6 @@ and (max-width: 700px){
         background:black;
         padding: 1vw;
         width:100vw; /* min-content */
-        font-family:"Oxygen";
         border-radius:12px;
         margin:0;
     }
