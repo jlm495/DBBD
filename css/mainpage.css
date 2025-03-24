@@ -834,13 +834,19 @@ and (max-width: 900px){
 
 @media screen
 and (max-width: 700px){
-    #episodesContainer{
+    /*#episodesContainer{
         max-width:90vw;
         display:grid;
         place-items:center;
         place-content:center;
         padding:0;
-        /*margin:-5vw;*/
+    }*/
+
+    #episodesContainer{
+        margin-left:-5vw;
+        margin:0;
+        padding:0;
+        width:100vw;
     }
     ul#nav-menu{
         text-align:center;
@@ -852,20 +858,23 @@ and (max-width: 700px){
     }
     div#mediaContainer{
         background:black;
-        padding: 10px 30px;
-        width:min-content;
+        padding: 1vw;
+        width:100vw; /* min-content */
         font-family:"Oxygen";
         border-radius:12px;
-
-    }
-    h2#episodesPageTitle{
-        padding: 10px 30vw;
-    }
-
-    ul#episodesList li{
         margin:0;
     }
-/*
+    ul#episodesList{
+        padding:0;
+    }
+    ul#episodesList li{
+        padding:0;
+        width:80vw;
+    }
+    h2#episodesPageTitle{
+        padding: 10px 40px;
+    }
+
     div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
         max-width:95vw;
     }
@@ -874,7 +883,19 @@ and (max-width: 700px){
         width:90vw;
     }
 
+    #episodesMain{
+        margin-left:-7vw;
+    }
+
+    .inactiveDesc{
+        margin-left:30px;
+    }
+
+    .icon{
+        width:50px;
+    }
+
     .poll-container {
         padding: 15px;
-    }*/
+    }
 }
