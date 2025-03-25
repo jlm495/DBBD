@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirt Bike Break Down - Episodes</title>
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/mainpage.css" rel="stylesheet">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+<div class="container" id="episodesContainer">
+
+    <header id="episodesHeader">
+        <h1 class="sr-only">Dirt Bike Break Down Episodes Page</h1>
+        <span aria-hidden=true>
+            <img src="./img/DBBD_banner.jpg" class="banner" id="episodesBanner">
+        </span>
+    </header>
+    
+    <nav class="navbar">
+        <h2 class="sr-only">main navigation</h2>
+        <button id="bgToggle"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
+        <ul>
+            <li class="pages"><a href="./index.html">Home</a></li>
+            <li class="pages"><a class="currentPage" href="./episodes.html">Episodes</a></li>
+            <li class="pages"><a href="./polls.html">More Fun</a></li>
+        </ul>
+    </nav>
+
+    <main id="episodesMain">
+        <h2 id="episodesPageTitle">Episode List</h2>
+        <div id="mediaContainer">
+            <!--width:400 height:232 id="stream" class="stream" frameborder="3"-->
+            <iframe src="https://share.descript.com/embed/VKgYhrahnWa" width="400" height="232" frameborder="0" allowfullscreen></iframe>
+            <p class="activeDescTitle">2 - MaveriX (Pt. 1)</p>
+            <ul id="media">
+                <li><a href="https://docs.google.com/document/d/19WPPcdH8xpYEHsuslpeWzgNSe5q1Xjkv/edit?usp=sharing&ouid=105770559381518672449&rtpof=true&sd=true"><img src="./img/transcriptBetter.png" alt="click to view transcript" class="icon" id="transcript"></a></li>
+                <li><a href="https://youtu.be/HAhnyTEzguY"><img src="./img/youtubeLogo.png" alt="click to view youtube channel" class="icon" id="youtube"></a></li>
+                <li><a href=""><img src="./img/spotifyLogo.png" alt="click to listen on spotify" class="icon" id="spotify"></a></li>
+            </ul>
+            <p class="activeDesc">We watch the first episode of the Netflix series, MaveriX</p>
+        </div>
+        <ul id="episodesList">
+            <li class="inactiveDescTitle"><a href="episode0.html">0 - Intro Episode</a></li>
+            <li class="inactiveDesc">We tell you a little bit about ourselves and our experience in the realm of dirt biking, as well as explain the show</li>
+            <li class="inactiveDescTitle"><a href="episodes.html">1 - Motocrossed</a></li>
+            <li class="inactiveDesc">We review the old Disney movie, Motocrossed</li>
+        </ul>
+    </main>
+    <!--<aside class="aside1" aria-hidden=true>
+        <img src="./img/flag.png" id="flag" class="bikes">
+        <img src="./img/blue_tire.png" id="blueTire" class="bikes">
+    </aside>
+    <aside class="aside2" aria-hidden=true>
+        <img src="./img/cornerSchematic.svg" id="corner" class="bikes">
+        <img src="./img/orangeHelmet.png" id="helmet" class="bikes">
+    </aside>-->
+</div>
+    
+</body>
+</html>
