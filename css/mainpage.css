@@ -902,9 +902,13 @@ and (max-width: 700px){
         margin-left:30px;
     }
 
-    .inactiveDescTitle{
-        margin-left:50px;
+    ul#episodesList li.inactiveDescTitle{
+        margin-left:0px;
     }
+
+   #episodesHeader{
+        padding-top:20px;
+   }
 
     .icon{
         width:50px;
