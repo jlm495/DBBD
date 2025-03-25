@@ -6,6 +6,9 @@
     margin: 0 auto;
     margin-bottom: 100px;
     display: grid;
+    place-items:center;
+    place-self:center;
+    place-content:center;
     border: 1px solid black;
     padding: 20px;
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
@@ -26,7 +29,7 @@ h2{
 
 body{
     font-family:'Oxygen';
-    font-size: 12pt;
+    font-size: 15pt;
 }
 
 .skip-link {
@@ -98,7 +101,7 @@ nav{
     margin-bottom:20px;
     border-radius:10px;
     text-align:center;
-    margin-left:-19px;
+    /*margin-left:-19px;*/
     box-shadow:0px 3px 0px, 0px 0px 7px black;
     grid-area:navvy;
     position:sticky;
@@ -249,6 +252,10 @@ div#mediaContainer ul{
     margin:10px;
 }
 
+.activeDesc{
+    font-size:12pt;
+}
+
 #episodesMain{
     display:grid;
     place-items:center;
@@ -256,17 +263,18 @@ div#mediaContainer ul{
 
 ul#episodesList li.inactiveDescTitle{
     list-style:none;
-    font-size: 20pt;
+    font-size: 25pt;
     position:relative;
     padding:5px;
     margin-bottom:40px;
     z-index:9;
     text-align:center;
+    margin-left:-50px;
 }
 
 ul#episodesList li.inactiveDesc{
     list-style:none;
-    font-size:12pt;
+    font-size:15pt;
     text-align: left;
 }
 
@@ -892,6 +900,10 @@ and (max-width: 700px){
 
     .inactiveDesc{
         margin-left:30px;
+    }
+
+    .inactiveDescTitle{
+        margin-left:50px;
     }
 
     .icon{
