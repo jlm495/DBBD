@@ -563,10 +563,10 @@ input[type="radio"]:focus + label {
     position: absolute;
     top:5vh;
     left:5vw;
-    /*align-items: center;*/
+    align-items: center;
     justify-content: space-between;
-    place-content:center;
-    width: 100px;
+    width: 120px;
+    height: 50px;
     transition: background-color 0.3s ease;
 }
 
