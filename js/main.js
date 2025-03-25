@@ -1,3 +1,6 @@
+/*
+Nav bar color wheel functionality, mobile menu toggle
+*/
 document.addEventListener('DOMContentLoaded', function() {
     // Get elements
     const navbar = document.querySelector('.navbar');
@@ -80,7 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Poll functionality
+/*
+Poll functionality
+*/
 let pollData = {};
 const form = document.querySelector('#poll-form');
 const errorMessage = document.getElementById('error-message');
