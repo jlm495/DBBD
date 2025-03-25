@@ -303,58 +303,45 @@ h2#episodesPageTitle{
 }
 
 #blueTire{
-    margin-top:100px;
-    margin-left:30px;
+    margin-top:200px;
+    margin-left:50px;
 }
 
 .aside1{
-    padding-right:150px;
+    /*padding-right:150px;*/
     grid-area:aside1;
-    margin-left:-50px;
+    /*margin-left:-50px;*/
 }
 
 .aside2{
-    padding-left:70px;
+    /*padding-left:70px;*/
     grid-area:aside2;
 }
 
 #flag{
-    position:relative;
-    margin-top:-200px;
-    margin-bottom:30px;
-    margin-left:-75px;
     z-index:0;
     width:200px;
+    margin-left:50px;
+    margin-top:300px;
 }
 
 #helmet{
-    z-index:1;
-    margin-top:70px;
-    margin-left:40px;
+    z-index:0;
+    margin-left:50px;
     width:150px;
 }
 
 #corner{
     width:700px;
-    position:relative;
-    margin-left:-450px;
     z-index:-1;
+    margin-left:-400px;
 }
-/*
-iframe{
-    margin-right:-40px;
-}
-*/
+
 iframe.stream{
     border-radius: 24px;
     border: black;
     z-index:8;
-    /*margin-right:-50px;*/
 }
-/*
-.activeDescTitle, .activeDesc{
-    margin-right:-50px;
-}*/
 
 .bikes{
     z-index:-1;
@@ -663,39 +650,6 @@ input[type="radio"]:focus + label {
         margin-top:30px;
         max-width:90vw;
     }
-
-    /* episodes page */
-    /*ul#episodesList li{
-        list-style:none;
-        font-size: 1.4em;
-        margin-top: 50px;
-    }
-
-    ul#episodesList{
-        margin-left:-5vw;
-    }
-
-    #episodeBG{
-       margin-left:5vw;  
-    }
-
-    h2#episodesPageTitle{
-        width:90vw;
-        margin-left:-1.5vw;
-    }
-
-    ul#episodesList p.inactiveDesc{
-        max-width:75ch;
-        text-align:left;
-        padding-left:7vw;
-        width:75vw;
-    }
-
-    div#mediaContainer{
-        margin:0;
-        padding-bottom:9vw;
-    }
-*/
 }
 
 @media screen
@@ -833,7 +787,7 @@ and (max-width: 900px){
 
     ul#episodesList{
         margin-left:-5vw;
-        margin-top:-50px;
+        
     }
 /* here! */
     .activeDescTitle{
@@ -844,13 +798,7 @@ and (max-width: 900px){
 
 @media screen
 and (max-width: 700px){
-    /*#episodesContainer{
-        max-width:90vw;
-        display:grid;
-        place-items:center;
-        place-content:center;
-        padding:0;
-    }*/
+
     #bannerMain{
         margin-left:-20px;
     }
