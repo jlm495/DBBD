@@ -134,23 +134,39 @@ function displayResults() {
     for (const option in pollData) {
         totalVotes += parseInt(pollData[option]);
     }
-    
+
+    // Find the maximum number of votes and determine the tied options
+    let maxVotes = 0;
+    let winningOptions = [];
+    for (const option in pollData) {
+        const votes = pollData[option];
+        if (votes > maxVotes) {
+            maxVotes = votes;
+            winningOptions = [option];  // New winner found, reset list to this option
+        } else if (votes === maxVotes) {
+            winningOptions.push(option);  // Tie found, add to list of winners
+        }
+    }
+
     // Generate result bars
     let resultsHTML = '';
     for (const option in pollData) {
         const votes = pollData[option];
         const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
         
+        // Determine the bar color: use green for the winners (including ties), gray for others
+        const barColor = winningOptions.includes(option) ? 'blueviolet' : 'gray';
+
         resultsHTML += `
             <div class="result-item">
                 <div class="result-label">${option.charAt(0).toUpperCase() + option.slice(1)}: ${votes} votes (${percentage}%)</div>
                 <div class="result-bar-container">
-                    <div class="result-bar" style="width: ${percentage}%"></div>
+                    <div class="result-bar" style="width: ${percentage}%; background-color: ${barColor};"></div>
                 </div>
             </div>
         `;
     }
-    
+
     resultsContainer.innerHTML = resultsHTML;
     pollResults.style.display = 'block';
 }
