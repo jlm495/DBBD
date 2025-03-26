@@ -75,15 +75,6 @@ main{
     width: 1px;
 }
 
-.mobile-only {
-    display: none;
-}
-
-.desktop-only {
-    display: flex;
-}
-
-
 /* Navigation */
 nav ul li{
     list-style: none;
@@ -183,7 +174,7 @@ nav ul li a.currentPage:visited{
 
 /* main page */
 main.noAsides{
-    margin-left:-200px;
+    /*margin-left:-200px;*/
     margin-bottom:50px;
 }
 
