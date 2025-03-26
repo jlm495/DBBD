@@ -159,7 +159,7 @@ function displayResults() {
 function fetchAndDisplayResults() {
     loadingIndicator.style.display = 'inline-block';
     
-    fetchJSONP('https://dirtbikebreakdownpoll.rf.gd/get-results-jsonp.php', function(data) {
+    fetchJSONP('https://dirtbikebreakdown.website/get-results-jsonp.php', function(data) {
         loadingIndicator.style.display = 'none';
         if (data.success) {
             pollData = data.results;
@@ -190,7 +190,7 @@ form.addEventListener('submit', function(event) {
     submitButton.disabled = true;
     
     // Use JSONP to submit vote
-    const voteUrl = `https://dirtbikebreakdownpoll.rf.gd/vote-handle-jsonp.php?vote=${vote}`;
+    const voteUrl = `https://dirtbikebreakdown.website/vote-handle-jsonp.php?vote=${vote}`;
     
     fetchJSONP(voteUrl, function(data) {
         loadingIndicator.style.display = 'none';
@@ -212,7 +212,7 @@ form.addEventListener('submit', function(event) {
             submitButton.textContent = 'Thanks for voting!';
             
             // Mark as voted in local storage
-            //localStorage.setItem('hasVoted', 'true');
+            localStorage.setItem('hasVoted', 'true');
             
             // Show the results
             displayResults();
