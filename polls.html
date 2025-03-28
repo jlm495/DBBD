@@ -29,8 +29,9 @@
     </nav>
 
     <main>
+        <h2>Polls</h2>
         <div class="poll-container" role="region" aria-labelledby="poll-heading">
-            <h2 id="poll-heading">What kind of rider are you?</h2>
+            <h2 class="poll-heading">What kind of rider are you?</h2>
             
             <div id="already-voted-message" class="already-voted-message" role="alert">
                 You've already voted in this poll. Thank you for your participation!
@@ -77,6 +78,66 @@
             <div id="poll-results" aria-live="polite">
                 <h3 class="results-heading">Poll Results</h3>
                 <div id="results-container"></div>
+            </div>
+        </div>
+        <div class="poll-container" role="region" aria-labelledby="poll-heading1">
+            <h2 class="poll-heading">Which is your favorite brand?</h2>
+            
+            <div id="already-voted-message1" class="already-voted-message" role="alert">
+                You've already voted in this poll. Thank you for your participation!
+            </div>
+            
+            <form id="poll-form1">
+                <fieldset>
+                    <legend>Select one option:</legend>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="yamaha" name="poll1" value="yamaha">
+                        <label for="option1">Yamaha</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="honda" name="poll1" value="honda">
+                        <label for="option2">Honda</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="ktm" name="poll1" value="ktm">
+                        <label for="option3">KTM</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="kawasaki" name="poll1" value="kawasaki">
+                        <label for="option4">Kawasaki</label>
+                    </div>
+                    
+                    <div class="poll-option">
+                        <input type="radio" id="suzuki" name="poll1" value="suzuki">
+                        <label for="option5">Suzuki</label>
+                    </div>
+
+                    <div class="poll-option">
+                        <input type="radio" id="husqvarna" name="poll1" value="husqvarna">
+                        <label for="option5">Husqvarna</label>
+                    </div>
+
+                    <div class="poll-option">
+                        <input type="radio" id="other1" name="poll1" value="other">
+                        <label for="option5">Other</label>
+                    </div>
+                    
+                    <div class="error-message" id="error-message1" role="alert"></div>
+                    
+                    <button type="submit" class="poll-submit" id="submit-button1">
+                        Vote
+                        <span id="loading-indicator1" class="loading" style="display: none;"></span>
+                    </button>
+                </fieldset>
+            </form>
+            
+            <div id="poll-results1"  aria-live="polite">
+                <h3 class="results-heading">Poll Results</h3>
+                <div id="results-container1"></div>
             </div>
         </div>
     </main>

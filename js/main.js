@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
 /*
 Poll functionality
 */
+
+// What kind of rider are you? Poll
 let pollData = {};
 const form = document.querySelector('#poll-form');
 const errorMessage = document.getElementById('error-message');
@@ -94,6 +96,16 @@ const resultsContainer = document.getElementById('results-container');
 const pollResults = document.getElementById('poll-results');
 const loadingIndicator = document.getElementById('loading-indicator');
 const alreadyVotedMessage = document.getElementById('already-voted-message');
+
+// best bike brand poll
+let pollData1 = {};
+const form1 = document.querySelector('#poll-form1');
+const errorMessage1 = document.getElementById('error-message1');
+const submitButton1 = document.getElementById('submit-button1');
+const resultsContainer1 = document.getElementById('results-container1');
+const pollResults1 = document.getElementById('poll-results1');
+const loadingIndicator1 = document.getElementById('loading-indicator1');
+const alreadyVotedMessage1 = document.getElementById('already-voted-message1');
 
 // Function to create a script tag for JSONP
 function fetchJSONP(url, callback) {
@@ -110,81 +122,232 @@ function fetchJSONP(url, callback) {
 }
 
 // Check if user has already voted
-function checkAlreadyVoted() {
-    const hasVoted = localStorage.getItem('hasVoted') === 'true';
-    if (hasVoted) {
-        alreadyVotedMessage.style.display = 'block';
-        form.style.display = 'none';
-        fetchAndDisplayResults();
-    } else {
-        alreadyVotedMessage.style.display = 'none';
-        pollResults.style.display = 'none'; // Hide results until after voting
+function checkAlreadyVoted(pollNum) {
+    
+    if(pollNum == 0){
+        const hasVoted = localStorage.getItem('hasVoted') === 'true';
+        if (hasVoted) {
+            alreadyVotedMessage.style.display = 'block';
+            form.style.display = 'none';
+            fetchAndDisplayResults(0);
+        } else {
+            alreadyVotedMessage.style.display = 'none';
+            pollResults.style.display = 'none'; // Hide results until after voting
+        }
+    }
+    else{
+        const hasVoted1 = localStorage.getItem('hasVoted1') === 'true';
+        if (hasVoted1) {
+            alreadyVotedMessage1.style.display = 'block';
+            form1.style.display = 'none';
+            fetchAndDisplayResults(1);
+        } else {
+            alreadyVotedMessage1.style.display = 'none';
+            pollResults1.style.display = 'none'; // Hide results until after voting
+        }
     }
 }
 
 // Display poll results
-function displayResults() {
-    if (!pollData || Object.keys(pollData).length === 0) {
-        resultsContainer.innerHTML = '<p>No results available at this time.</p>';
-        return;
-    }
-    
-    // Calculate total votes
-    let totalVotes = 0;
-    for (const option in pollData) {
-        totalVotes += parseInt(pollData[option]);
-    }
+function displayResults(pollNum) {
 
-    // Find the maximum number of votes and determine the tied options
-    let maxVotes = 0;
-    let winningOptions = [];
-    for (const option in pollData) {
-        const votes = pollData[option];
-        if (votes > maxVotes) {
-            maxVotes = votes;
-            winningOptions = [option];  // New winner found, reset list to this option
-        } else if (votes === maxVotes) {
-            winningOptions.push(option);  // Tie found, add to list of winners
+    if(pollNum == 0){
+        if (!pollData || Object.keys(pollData).length === 0) {
+            resultsContainer.innerHTML = '<p>No results available at this time.</p>';
+            return;
         }
-    }
-
-    // Generate result bars
-    let resultsHTML = '';
-    for (const option in pollData) {
-        const votes = pollData[option];
-        const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
         
-        // Determine the bar color: use green for the winners (including ties), gray for others
-        const barColor = winningOptions.includes(option) ? 'blueviolet' : 'gray';
+        // Calculate total votes
+        let totalVotes = 0;
+        for (const option in pollData) {
+            totalVotes += parseInt(pollData[option]);
+        }
 
-        resultsHTML += `
-            <div class="result-item">
-                <div class="result-label">${option.charAt(0).toUpperCase() + option.slice(1)}: ${votes} votes (${percentage}%)</div>
-                <div class="result-bar-container">
-                    <div class="result-bar" style="width: ${percentage}%; background-color: ${barColor};"></div>
+        // Find the maximum number of votes and determine the tied options
+        let maxVotes = 0;
+        let winningOptions = [];
+        for (const option in pollData) {
+            const votes = pollData[option];
+            if (votes > maxVotes) {
+                maxVotes = votes;
+                winningOptions = [option];  // New winner found, reset list to this option
+            } else if (votes === maxVotes) {
+                winningOptions.push(option);  // Tie found, add to list of winners
+            }
+        }
+
+        // Generate result bars
+        let resultsHTML = '';
+        for (const option in pollData) {
+            const votes = pollData[option];
+            const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
+            
+            // Determine the bar color: use green for the winners (including ties), gray for others
+            const barColor = winningOptions.includes(option) ? 'blueviolet' : 'gray';
+
+            resultsHTML += `
+                <div class="result-item">
+                    <div class="result-label">${option.charAt(0).toUpperCase() + option.slice(1)}: ${votes} votes (${percentage}%)</div>
+                    <div class="result-bar-container">
+                        <div class="result-bar" style="width: ${percentage}%; background-color: ${barColor};"></div>
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
+        }
+
+        resultsContainer.innerHTML = resultsHTML;
+        pollResults.style.display = 'block';
     }
 
-    resultsContainer.innerHTML = resultsHTML;
-    pollResults.style.display = 'block';
+    else{
+        if (!pollData1 || Object.keys(pollData1).length === 0) {
+            resultsContainer1.innerHTML = '<p>No results available at this time.</p>';
+            return;
+        }
+        
+        // Calculate total votes
+        let totalVotes = 0;
+        for (const option in pollData1) {
+            totalVotes += parseInt(pollData1[option]);
+        }
+
+        // Find the maximum number of votes and determine the tied options
+        let maxVotes = 0;
+        let winningOptions = [];
+        for (const option in pollData1) {
+            const votes = pollData1[option];
+            if (votes > maxVotes) {
+                maxVotes = votes;
+                winningOptions = [option];  // New winner found, reset list to this option
+            } else if (votes === maxVotes) {
+                winningOptions.push(option);  // Tie found, add to list of winners
+            }
+        }
+
+        // Generate result bars
+        let resultsHTML = '';
+        for (const option in pollData1) {
+            const votes = pollData1[option];
+            const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
+            
+            // Determine the bar color: use green for the winners (including ties), gray for others
+            //const barColor = winningOptions.includes(option) ? 'blueviolet' : 'gray';
+            let barColor = 'white';
+            let barOutline = 'white';
+            if(option == 'yamaha'){
+                if(winningOptions.includes(option)){
+                    barColor = 'blue';
+                    barOutline = 'white';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'blue';
+                }
+            }
+            if(option == 'kawasaki'){
+                if(winningOptions.includes(option)){
+                    barColor = 'green';
+                    barOutline = 'white';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'green';
+                }
+            }
+            if(option == 'honda'){
+                if(winningOptions.includes(option)){
+                    barColor = 'red';
+                    barOutline = 'white';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'red';
+                }
+            }
+            if(option == 'suzuki'){
+                if(winningOptions.includes(option)){
+                    barColor = 'yellow';
+                    barOutline = 'white';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'yellow';
+                }
+            }
+            if(option == 'ktm'){
+                if(winningOptions.includes(option)){
+                    barColor = 'orange';
+                    barOutline = 'white';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'orange';
+                }
+            }
+            if(option == 'husqvarna'){
+                if(winningOptions.includes(option)){
+                    barColor = 'white';
+                    barOutline = 'navyblue';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'white';
+                }
+            }
+            if(option == 'other'){
+                if(winningOptions.includes(option)){
+                    barColor = 'blueviolet';
+                    barOutline = 'white';
+                }
+                else{
+                    barColor = 'black';
+                    barOutline = 'blueviolet';
+                }
+            }
+            resultsHTML += `
+                <div class="result-item">
+                    <div class="result-label">${option.charAt(0).toUpperCase() + option.slice(1)}: ${votes} votes (${percentage}%)</div>
+                    <div class="result-bar-container">
+                        <div class="result-bar" style="width: ${percentage}%; background-color: ${barColor}; border: 3px solid ${barOutline}"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        resultsContainer1.innerHTML = resultsHTML;
+        pollResults1.style.display = 'block';
+    }
 }
 
 // Fetch current results
-function fetchAndDisplayResults() {
+function fetchAndDisplayResults(pollNum) { // 0 - type poll, 1 - brand poll
     loadingIndicator.style.display = 'inline-block';
     
-    fetchJSONP('https://dirtbikebreakdown.website/get-results-jsonp.php', function(data) {
-        loadingIndicator.style.display = 'none';
-        if (data.success) {
-            pollData = data.results;
-            displayResults();
-        } else {
-            errorMessage.textContent = data.error || 'Error loading poll results.';
-            errorMessage.style.display = 'block';
-        }
-    });
+    if(pollNum == 0){
+        fetchJSONP('https://dirtbikebreakdown.website/get-results-jsonp.php', function(data) {
+            loadingIndicator.style.display = 'none';
+            if (data.success) {
+                pollData = data.results;
+                displayResults(0);
+            } else {
+                errorMessage.textContent = data.error || 'Error loading poll results.';
+                errorMessage.style.display = 'block';
+            }
+        });
+    }
+
+    else{
+        fetchJSONP('https://dirtbikebreakdown.website/get-results-jsonp1.php', function(data1) {
+            loadingIndicator.style.display = 'none';
+            if (data1.success) {
+                pollData1 = data1.results;
+                displayResults(1);
+            } else {
+                errorMessage1.textContent = data1.error || 'Error loading poll results.';
+                errorMessage1.style.display = 'block';
+            }
+        });
+    }
 }
 // Submit vote
 form.addEventListener('submit', function(event) {
@@ -231,11 +394,62 @@ form.addEventListener('submit', function(event) {
             localStorage.setItem('hasVoted', 'true');
             
             // Show the results
-            displayResults();
+            displayResults(0);
         }
     });
 });
+
+form1.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const selectedOption = document.querySelector('input[name="poll1"]:checked');
+    
+    if (!selectedOption) {
+        errorMessage1.textContent = 'Please select an option before voting.';
+        errorMessage1.style.display = 'block';
+        return;
+    }
+    
+    errorMessage1.style.display = 'none';
+    const vote = selectedOption.value;
+    
+    // Show loading indicator
+    loadingIndicator1.style.display = 'inline-block';
+    submitButton1.disabled = true;
+    
+    // Use JSONP to submit vote
+    const voteUrl = `https://dirtbikebreakdown.website/vote-handle-jsonp1.php?vote=${vote}`;
+    
+    fetchJSONP(voteUrl, function(data1) {
+        loadingIndicator1.style.display = 'none';
+        
+        if (data1.error) {
+            errorMessage1.textContent = data1.error;
+            errorMessage1.style.display = 'block';
+            submitButton1.disabled = false;
+        } else if (data1.success) {
+            pollData1 = data1.results;
+            
+            // Disable the form to prevent multiple votes
+            const radioButtons = document.querySelectorAll('input[name="poll1"]');
+            radioButtons.forEach(button => {
+                button.disabled = true;
+            });
+            
+            submitButton1.disabled = true;
+            submitButton1.textContent = 'Thanks for voting!';
+            
+            // Mark as voted in local storage
+            localStorage.setItem('hasVoted1', 'true');
+            
+            // Show the results
+            displayResults(1);
+        }
+    });
+});
+
 // Initialize the poll
 document.addEventListener('DOMContentLoaded', function() {
-    checkAlreadyVoted();
+    checkAlreadyVoted(0);
+    checkAlreadyVoted(1);
 });

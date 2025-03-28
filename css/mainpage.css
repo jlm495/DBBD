@@ -362,9 +362,6 @@ ul#media{
     width:35px;
 }
 
-/*.banner{
-    margin-left:-5vw;
-}*/
 
 /* Poll page */
 #pollPageContainer{
@@ -372,6 +369,12 @@ ul#media{
     place-content:center;
     place-items:center;
     place-self:center;
+}
+div#pollPageContainer h2{
+    text-align: center;
+    margin-bottom:30px;
+    border: 2px solid black;
+    padding:5px;
 }
 .poll-container {
     border: 3px solid gray;
@@ -390,7 +393,7 @@ fieldset {
     margin: 0;
 }
 
-#poll-heading{
+.poll-heading{
     font-weight: normal;
     font-size: 30pt;
     text-align:center;
@@ -459,6 +462,13 @@ input[type="radio"]:focus + label {
 
 /* Results styling */
 #poll-results {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: none;
+}
+
+#poll-results1 {
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px solid #eee;
