@@ -861,11 +861,11 @@ and (max-width: 700px){
     .container{
         width:90vw;
     }
-
+    /*
     #episodesMain{
-        margin-left:-7vw;
+        /*margin-left:-7vw;
     }
-
+    */
     .inactiveDesc{
         margin-left:30px;
     }
