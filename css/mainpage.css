@@ -9,6 +9,12 @@
     place-items:center;
     place-self:center;
     place-content:center;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    justify-self:center;
+    align-self:center;
     border: 1px solid black;
     padding: 20px;
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
@@ -216,6 +222,12 @@ div#mediaContainer{
     /*padding: 10px 90px;*/
     display: grid;
     place-items:center;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    justify-self:center;
+    align-self:center;
     /*padding: 60px 150px;*/
     padding: 40px 100px;
     
@@ -229,6 +241,12 @@ div#mediaContainer ul{
     place-content:center;
     place-self:center;
     place-items:center;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    justify-self:center;
+    align-self:center;
     margin:0;
     margin-left:-40px;
 }
@@ -237,6 +255,12 @@ div#mediaContainer ul{
     display:-webkit-grid;
     display:grid;
     place-items:center;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    justify-self:center;
+    align-self:center;
 }
 
 .activeDescTitle{
@@ -251,6 +275,12 @@ div#mediaContainer ul{
 #episodesMain{
     display:grid;
     place-items:center;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    justify-self:center;
+    align-self:center;
 }
 
 ul#episodesList li.inactiveDescTitle{
@@ -370,6 +400,12 @@ ul#media{
     place-content:center;
     place-items:center;
     place-self:center;
+    justify-content:center;
+    justify-items:center;
+    align-items:center;
+    align-content:center;
+    justify-self:center;
+    align-self:center;
 }
 div#pollPageContainer h2{
     text-align: center;
@@ -722,6 +758,12 @@ and (max-width: 900px){
         place-items:center;
         place-content:center;
         place-self:center;
+        justify-content:center;
+        justify-items:center;
+        align-items:center;
+        align-content:center;
+        justify-self:center;
+        align-self:center;
     }
     
     .navbar ul {
@@ -731,6 +773,12 @@ and (max-width: 900px){
         place-items:center;
         place-content:center;
         place-self:center;
+        justify-content:center;
+        justify-items:center;
+        align-items:center;
+        align-content:center;
+        justify-self:center;
+        align-self:center;
     }
     
     .navbar li {
@@ -814,12 +862,24 @@ and (max-width: 700px){
         place-items:center;
         place-self:center;
         place-content:center;
+        justify-content:center;
+        justify-items:center;
+        align-items:center;
+        align-content:center;
+        justify-self:center;
+        align-self:center;
     }
     #episodesHeader{
         display:grid;
         place-items:center;
         place-self:center;
         place-content:center;
+        justify-content:center;
+        justify-items:center;
+        align-items:center;
+        align-content:center;
+        justify-self:center;
+        align-self:center;
         width:95vw;
         margin:0;
     }
@@ -828,6 +888,12 @@ and (max-width: 700px){
         place-items:center;
         place-self:center;
         place-content:center;
+        justify-content:center;
+        justify-items:center;
+        align-items:center;
+        align-content:center;
+        justify-self:center;
+        align-self:center;
         width:100vw;
     }
     ul#nav-menu{
@@ -835,6 +901,12 @@ and (max-width: 700px){
         place-items:center;
         place-content: center;
         place-self:center;
+        justify-content:center;
+        justify-items:center;
+        align-items:center;
+        align-content:center;
+        justify-self:center;
+        align-self:center;
         margin:0;
         padding:0;
     }
