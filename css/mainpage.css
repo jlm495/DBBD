@@ -936,7 +936,7 @@ and (max-width: 700px){
    }
 
    div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
-    max-width:95vw;
+    max-width:80vw;
    }
 
     .icon{
