@@ -858,7 +858,7 @@ and (max-width: 700px){
         /*margin-left:-5vw;*/
         margin:0;
         padding:0;
-        width: 95vw;
+        width: 100vw;
         place-items:center;
         place-self:center;
         place-content:center;
@@ -880,7 +880,7 @@ and (max-width: 700px){
         align-content:center;
         justify-self:center;
         align-self:center;
-        width:95vw;
+        width:90vw;
         margin:0;
     }
     ul#episodesList{
@@ -894,7 +894,7 @@ and (max-width: 700px){
         align-content:center;
         justify-self:center;
         align-self:center;
-        width:100vw;
+        width:90vw;
     }
     ul#nav-menu{
         text-align:center;
@@ -914,45 +914,29 @@ and (max-width: 700px){
     div#mediaContainer{
         background:black;
         padding: 1vw;
-        width:100vw; /* min-content */
+        width:min-content; /* min-content */
         border-radius:12px;
         margin:0;
     }
-    ul#episodesList{
-        padding:0;
-    }
-    ul#episodesList li{
-        padding:0;
-        width:80vw;
-    }
+
     h2#episodesPageTitle{
         padding: 10px 40px;
-    }
-
-    div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
-        max-width:95vw;
     }
 
     .container{
         width:90vw;
     }
     
-    #episodesMain{
-        margin:0;
-        margin-bottom:50px;
-    }
-    
     .inactiveDesc{
-        margin-left:0;
         margin-bottom:100px;
-    }
-
-    ul#episodesList li.inactiveDescTitle{
-        margin-left:0px;
     }
 
    #episodesHeader{
         padding-top:20px;
+   }
+
+   div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
+    max-width:95vw;
    }
 
     .icon{
