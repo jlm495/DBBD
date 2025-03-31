@@ -234,6 +234,7 @@ div#mediaContainer ul{
 }
 
 #episodesContainer{
+    display:-webkit-grid;
     display:grid;
     place-items:center;
 }
@@ -794,7 +795,9 @@ and (max-width: 900px){
     .activeDescTitle{
         font-size:20pt;
     }
-   
+    div#mediaContainer ul{
+        margin:0;
+    }
 }
 
 @media screen
