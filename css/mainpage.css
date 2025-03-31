@@ -929,6 +929,7 @@ and (max-width: 700px){
     
     .inactiveDesc{
         margin-bottom:100px;
+        padding-right:10px;
     }
 
    #episodesHeader{
@@ -946,5 +947,10 @@ and (max-width: 700px){
     .poll-container {
         padding: 15px;
         width:80vw;
+    }
+
+    div#mediaContainer ul{
+        margin:0;
+        padding:0;
     }
 }
