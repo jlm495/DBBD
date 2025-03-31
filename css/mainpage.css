@@ -678,7 +678,7 @@ and (max-width: 900px){
         border:none;
         box-shadow:none;
         max-width:95vw;
-        margin:none;
+        margin:0;
         margin-left:0;
         grid-template-columns:
            1fr;
@@ -759,19 +759,12 @@ and (max-width: 900px){
         outline: 2px solid white;
     }
     
-    /* Position the color wheel toggle for mobile */
-    /*#bgToggle {
-        position: absolute;
-        top: 10px;
-        right: 160px;
-        width: 40px;
-        height: 40px;
-        z-index: 100;
-    }*/
-    
     #bgToggle img {
         width: 100px;
         height: auto;
+    }
+    #bgToggle{
+        padding-left:20px;
     }
     
     /* Add focus styles for accessibility */
@@ -783,9 +776,12 @@ and (max-width: 900px){
         margin:0;
     }
 
-    main{
+    main#main-content{
         margin:0;
         max-width:90vw;
+    }
+    main#episodesMain{
+        width:100vw;
     }
    
     figure img{
@@ -795,21 +791,6 @@ and (max-width: 900px){
         margin-left:-10px;
     }
 
-    /*.icon{
-        width:5vw;
-    }
-
-    div#mediaContainer{
-        width:100vw;
-        margin-left:-130px;
-        padding-left:70px;
-    }*/
-/*
-    ul#episodesList{
-        margin-left:-5vw;
-        
-    }*/
-/* here! */
     .activeDescTitle{
         font-size:20pt;
     }
@@ -826,6 +807,24 @@ and (max-width: 700px){
         /*margin-left:-5vw;*/
         margin:0;
         padding:0;
+        width: 95vw;
+        place-items:center;
+        place-self:center;
+        place-content:center;
+    }
+    #episodesHeader{
+        display:grid;
+        place-items:center;
+        place-self:center;
+        place-content:center;
+        width:95vw;
+        margin:0;
+    }
+    ul#episodesList{
+        margin:0;
+        place-items:center;
+        place-self:center;
+        place-content:center;
         width:100vw;
     }
     ul#nav-menu{
@@ -836,6 +835,7 @@ and (max-width: 700px){
         margin:0;
         padding:0;
     }
+
     div#mediaContainer{
         background:black;
         padding: 1vw;
@@ -863,11 +863,13 @@ and (max-width: 700px){
     }
     
     #episodesMain{
-        margin-left:-7vw;
+        margin:0;
+        margin-bottom:50px;
     }
     
     .inactiveDesc{
-        margin-left:30px;
+        margin-left:0;
+        margin-bottom:100px;
     }
 
     ul#episodesList li.inactiveDescTitle{
@@ -884,5 +886,6 @@ and (max-width: 700px){
 
     .poll-container {
         padding: 15px;
+        width:80vw;
     }
 }
