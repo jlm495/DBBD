@@ -13,6 +13,7 @@ body{
     background:url(./img/DBBD_black_checker.jpg);
     background-color: #ffffff99;
     background-blend-mode: soft-light;
+    display:grid;
 }
 
 .banner:hover, .h2:hover {
