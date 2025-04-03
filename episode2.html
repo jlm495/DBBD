@@ -14,7 +14,7 @@
     <header id="episodesHeader">
         <h1 class="sr-only">Dirt Bike Break Down Episodes Page</h1>
         <span aria-hidden=true>
-            <img src="./img/DBBD_banner.jpg" class="banner" id="episodesBanner" alt="banner with free body diagram and dirt bikes">
+            <img src="./img/DBBD-banner.svg" class="banner" id="episodesBanner" alt="banner with free body diagram and dirt bikes">
         </span>
     </header>
     
@@ -29,33 +29,55 @@
     </nav>
 
     <main id="episodesMain">
-        <h2 id="episodesPageTitle">Episode List</h2>
         <div id="mediaContainer">
             <!--width:400 height:232 id="stream" class="stream" frameborder="3"-->
-            <iframe id="stream" class="stream" src="https://share.descript.com/embed/VKgYhrahnWa" width="400" height="232" allowfullscreen></iframe>
+            <iframe id="stream" class="stream" src="https://share.descript.com/embed/VKgYhrahnWa" width="700" height="340" allowfullscreen></iframe>
             <p class="activeDescTitle">2 - MaveriX (Pt. 1)</p>
             <ul id="media">
                 <li><a href="https://docs.google.com/document/d/19WPPcdH8xpYEHsuslpeWzgNSe5q1Xjkv/edit?usp=sharing&ouid=105770559381518672449&rtpof=true&sd=true"><img src="./img/transcriptBetter.png" alt="click to view transcript" class="icon" id="transcript"></a></li>
                 <li><a href="https://youtu.be/gtYBsD5On4M"><img src="./img/youtubeLogo.png" alt="click to view youtube channel" class="icon" id="youtube"></a></li>
                 <li><a href="https://open.spotify.com/episode/2nwStKwje4tOt5xo3AToSA?si=6c1ee22804b046a3"><img src="./img/spotifyLogo.png" alt="click to listen on spotify" class="icon" id="spotify"></a></li>
             </ul>
-            <p class="activeDesc">We watch the first episode of the Netflix series, MaveriX, and break down the physics of MIPS technology</p>
+            <p class="activeDesc">We watch the first episode of the Netflix series, MaveriX, and break down the physics of MIPS technology.</p>
         </div>
-        <ul id="episodesList">
-            <li class="inactiveDescTitle"><a href="episode0.html">0 - Intro Episode</a></li>
-            <li class="inactiveDesc">We tell you a little bit about ourselves and our experience in the realm of dirt biking, as well as explain the show</li>
-            <li class="inactiveDescTitle"><a href="episodes.html">1 - Motocrossed</a></li>
-            <li class="inactiveDesc">We review the old Disney movie, Motocrossed, and break down some of the physics of cornering</li>
-        </ul>
+        <div id="skips-container">
+            <div id="prev" class="card">
+                <p class="skip-text">Previous Episode</p>
+                <a href="./episode1.html"><img src="./img/fast-forward.svg" id="skip-back" class="skip"></a>
+                <img src="./img/motocrossedThumb.jpg" class="skip-thumb" class="episode-image">
+            </div>
+        </div>
     </main>
-    <!--<aside class="aside1" aria-hidden=true>
-        <img src="./img/flag.png" id="flag" class="bikes">
-        <img src="./img/blue_tire.png" id="blueTire" class="bikes">
-    </aside>
-    <aside class="aside2" aria-hidden=true>
-        <img src="./img/cornerSchematic.svg" id="corner" class="bikes">
-        <img src="./img/orangeHelmet.png" id="helmet" class="bikes">
-    </aside>-->
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">Dirt Bike <span>Break Down</span></div>
+                    <div class="platform-links">
+                        <a href="https://open.spotify.com/show/4Fpg1l4D67FOJVjlNXO32m?si=690678a6f4f045a6" class="platform-button">
+                            <span class="platform-icon spotify-icon"></span>
+                            Spotify
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PL3F6BniSRAXVQ_MHfX1gR7gL_WYwXc7t0" class="platform-button">
+                            <span class="platform-icon youtube-icon"></span>
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Dirt Bike Break Down. All rights reserved.
+                </div>
+                
+                <div class="bottom-links">
+                    <a href="mailto:dirtbikebreakdown@gmail.com"><i class="far fa-envelope"></i> dirtbikebreakdown@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
     
 </body>

@@ -14,7 +14,7 @@
     <header id="episodesHeader">
         <h1 class="sr-only">Dirt Bike Break Down Episodes Page</h1>
         <span aria-hidden=true>
-            <img src="./img/DBBD_banner.jpg" class="banner" id="episodesBanner" alt="banner with free body diagram and dirt bikes">
+            <img src="./img/DBBD-banner.svg" class="banner" id="episodesBanner" alt="banner with free body diagram and dirt bikes">
         </span>
     </header>
     
@@ -31,33 +31,164 @@
 
     <main id="episodesMain">
         <h2 id="episodesPageTitle">Episode List</h2>
-        <div id="mediaContainer">
-            <!--width:400 height:232 id="stream" class="stream" frameborder="3"-->
-            <iframe id="stream" class="stream" src="https://share.descript.com/embed/6oI8rskJuZF" width="400" height="232" allowfullscreen></iframe>
-            <p class="activeDescTitle">1 - Motocrossed</p>
-            <ul id="media">
-                <li><a href="https://docs.google.com/document/d/1XYP4j2InbgdT5jXkgHEfReAQjaIZqM8d/edit?usp=sharing&ouid=105770559381518672449&rtpof=true&sd=true"><img src="./img/transcriptBetter.png" alt="click to view transcript" class="icon" id="transcript"></a></li>
-                <li><a href="https://youtu.be/YfMonkLXCz8"><img src="./img/youtubeLogo.png" alt="click to view youtube channel" class="icon" id="youtube"></a></li>
-                <li><a href="https://open.spotify.com/episode/7bQuxsYhvoVUST0r9ebZV5?si=780c1a18eb75413d"><img src="./img/spotifyLogo.png" alt="click to listen on spotify" class="icon" id="spotify"></a></li>
-            </ul>
-            <p class="activeDesc">We review the old Disney movie, Motocrossed, and break down some of the physics of cornering</p>
+        <div id="episodesList">
+
+            <div class="card">
+                <!-- Splatter effect -->
+                <div class="splatter"></div>
+                
+                <!-- Dirt spots -->
+                <div class="dirt-spot"></div>
+                <div class="dirt-spot"></div>
+                <div class="dirt-spot"></div>
+                
+                <!-- Episode thumbnail -->
+                <div class="episode-thumb">
+                    <img src="./img/introThumb.jpg" alt="Introduction Thumbnail" class="episode-image">
+                    <div class="episode-number">Episode 0</div>
+                </div>
+                
+                <!-- Episode content -->
+                <div class="episode-content">
+                    <h3 class="episode-title"><a href="./episode0.html">0 - Introduction</a></h3>
+                    
+                    <div class="episode-meta">
+                        <div class="meta-item">
+                            <i class="far fa-calendar"></i>
+                            <span>April 2, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>45 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="episode-description">
+                        Get to know us! We tell you a little bit about ourselves and our experience in the realm of dirt biking, as well as explain the show.
+                    </div>
+                    
+                    <div class="episode-actions">
+                        <a href="./episode0.html" class="play-button">
+                            <img src="./img/playButton.svg" id="playButton"> Listen
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <!-- Splatter effect -->
+                <div class="splatter"></div>
+                
+                <!-- Dirt spots -->
+                <div class="dirt-spot"></div>
+                <div class="dirt-spot"></div>
+                <div class="dirt-spot"></div>
+                
+                <!-- Episode thumbnail -->
+                <div class="episode-thumb">
+                    <img src="./img/motocrossedThumb.jpg" alt="Motocrossed Thumbnail" class="episode-image">
+                    <div class="episode-number">Episode 1</div>
+                </div>
+                
+                <!-- Episode content -->
+                <div class="episode-content">
+                    <h3 class="episode-title"><a href="./episode1.html">1 - Motocrossed</a></h3>
+                    
+                    <div class="episode-meta">
+                        <div class="meta-item">
+                            <i class="far fa-calendar"></i>
+                            <span>April 2, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>45 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="episode-description">
+                        We review the old Disney movie, Motocrossed, and break down some of the physics of cornering.
+                    </div>
+                    
+                    <div class="episode-actions">
+                        <a href="./episode1.html" class="play-button">
+                            <img src="./img/playButton.svg" id="playButton"> Listen
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- Splatter effect -->
+                <div class="splatter"></div>
+                
+                <!-- Dirt spots -->
+                <div class="dirt-spot"></div>
+                <div class="dirt-spot"></div>
+                <div class="dirt-spot"></div>
+                
+                <!-- Episode thumbnail -->
+                <div class="episode-thumb">
+                    <img src="./img/maverixThumb.jpg" alt="MaveriX (pt.1) Thumbnail" class="episode-image">
+                    <div class="episode-number">Episode 2</div>
+                </div>
+                
+                <!-- Episode content -->
+                <div class="episode-content">
+                    <h3 class="episode-title"><a href="./episode2.html">2 - MaveriX (Pt. 1)</a></h3>
+                    
+                    <div class="episode-meta">
+                        <div class="meta-item">
+                            <i class="far fa-calendar"></i>
+                            <span>April 2, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>45 min</span>
+                        </div>
+                    </div>
+                    
+                    <div class="episode-description">
+                        We watch the first episode of the Netflix series, MaveriX, and break down the physics of MIPS technology.
+                    </div>
+                    
+                    <div class="episode-actions">
+                        <a href="./episode2.html" class="play-button">
+                            <img src="./img/playButton.svg" id="playButton"> Listen
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul id="episodesList">
-            <li class="inactiveDescTitle"><a href="episode0.html">0 - Intro Episode</a></li>
-            <li class="inactiveDesc">We tell you a little bit about ourselves and our experience in the realm of dirt biking, as well as explain the show</li>
-            <li class="inactiveDescTitle"><a href="episode2.html">2 - MaveriX (Pt. 1)</a></li>
-            <li class="inactiveDesc">We watch the first episode of the Netflix series, MaveriX, and break down the physics of MIPS technology</li>
-        </ul>
     </main>
-    <!--<aside class="aside1" aria-hidden=true>
-        <img src="./img/flag.png" id="flag" class="bikes">
-        <img src="./img/blue_tire.png" id="blueTire" class="bikes">
-    </aside>
-    <aside class="aside2" aria-hidden=true>
-        <img src="./img/cornerSchematic.svg" id="corner" class="bikes">
-        <img src="./img/orangeHelmet.png" id="helmet" class="bikes">
-    </aside>-->
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">Dirt Bike <span>Break Down</span></div>
+                    <div class="platform-links">
+                        <a href="https://open.spotify.com/show/4Fpg1l4D67FOJVjlNXO32m?si=690678a6f4f045a6" class="platform-button">
+                            <span class="platform-icon spotify-icon"></span>
+                            Spotify
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PL3F6BniSRAXVQ_MHfX1gR7gL_WYwXc7t0" class="platform-button">
+                            <span class="platform-icon youtube-icon"></span>
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Dirt Bike Break Down. All rights reserved.
+                </div>
+                
+                <div class="bottom-links">
+                    <a href="mailto:dirtbikebreakdown@gmail.com"><i class="far fa-envelope"></i> dirtbikebreakdown@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
-    
 </body>
 </html>
