@@ -479,7 +479,7 @@ div#mediaContainer{
     color:white;
     font-family:"Oxygen";
     text-align:center;
-    background-image:url("./img/episodesBG.svg");
+    background-image:url("../img/episodesBG.svg");
     background-size: contain;
     background-repeat:no-repeat;
     background-position: 50%;
