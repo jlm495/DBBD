@@ -16,6 +16,10 @@ body{
     display:grid;
 }
 
+main, section{
+    display:grid;
+}
+
 .banner:hover, .h2:hover {
     animation: revEngine 0.1s infinite;
     text-shadow: 2px 2px 10px rgba(252, 65, 3, 0.7);
