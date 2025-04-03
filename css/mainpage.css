@@ -10,7 +10,7 @@
 }
 
 body{
-    background:url(DBBD_black_checker.jpg);
+    background:url(./img/DBBD_black_checker.jpg);
     background-color: #ffffff99;
     background-blend-mode: soft-light;
 }
@@ -305,7 +305,7 @@ nav ul li{
 nav{
     width:1150px;
     height:50px;
-    background-image: url(DBBD_black_checker.jpg);
+    background-image: url(./img/DBBD_black_checker.jpg);
     background-size: cover;
     background-position: center;
     margin-top:-10px;
@@ -479,7 +479,7 @@ div#mediaContainer{
     color:white;
     font-family:"Oxygen";
     text-align:center;
-    background-image:url("../DBBD/DBBD/img/episodesBG.svg");
+    background-image:url("./img/episodesBG.svg");
     background-size: contain;
     background-repeat:no-repeat;
     background-position: 50%;

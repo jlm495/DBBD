@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Background cycling functionality
     const backgrounds = [
-        'url("DBBD_black_checker.jpg")',
-        'url("DBBD_blue_checkers.jpg")',
-        'url("DBBD_red_checkers.jpg")',
-        'url("DBBD_orange_checkers.jpg")',
-        'url("DBBD_green_checkers.jpg")',
-        'url("DBBD_yellow_checkers.jpg")'
+        'url("./img/DBBD_black_checker.jpg")',
+        'url("./img/DBBD_blue_checkers.jpg")',
+        'url("./img/DBBD_red_checkers.jpg")',
+        'url("./img/DBBD_orange_checkers.jpg")',
+        'url("./img/DBBD_green_checkers.jpg")',
+        'url("./img/DBBD_yellow_checkers.jpg")'
     ];
     
     // Get saved background index or default to 0
