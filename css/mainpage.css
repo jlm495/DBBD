@@ -1581,13 +1581,6 @@ and (max-width: 700px){
    #episodesHeader{
         padding-top:20px;
    }
-
-   /*
-    .poll-container {
-        padding: 15px;
-        width:80vw;
-    }
-   */
    
    .poll-container{
         width:80vw;
@@ -1597,6 +1590,7 @@ and (max-width: 700px){
 
    .poll-container.even{
         margin-top:-300px;
+        margin-bottom:-50px;
    }
     div#mediaContainer ul{
         margin:0;
