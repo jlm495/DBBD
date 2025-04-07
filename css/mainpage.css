@@ -576,6 +576,7 @@ div#episodesList{
     transform: rotate(-2deg);
     transition: all 0.3s ease;
     border: 1px solid #333;
+    margin-top:50px;
 }
 
 .card:hover{
@@ -788,6 +789,7 @@ h2#episodesPageTitle{
 
     padding: 10px;
     text-align: center;
+    margin-bottom:-50px;
 }
 
 .activeDescTitle, .episodeTitle{
@@ -889,6 +891,9 @@ img.skip{
 }
 
 /* Poll page */
+main#pollMain{
+    max-width:95vw;
+}
 #pollPageContainer{
     display:grid;
     place-content:center;
@@ -904,17 +909,40 @@ img.skip{
 div#pollPageContainer h2{
     text-align: center;
     margin-bottom:30px;
-    border: 2px solid black;
     padding:5px;
+}
+
+div#polls{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
 }
 .poll-container {
     border: 3px solid gray;
     border-radius: 8px;
-    padding: 25px;
-    margin: 20px 0;
+    padding: 25px; /* 25px */
+    /*margin: 20px 0;*/
     box-shadow: 0px 1px 0px, 0px 0px 7px black;
     background:black;
     color:white;
+    width:500px;
+    height:fit-content;
+    scale:80%;
+}
+
+.poll-container.odd{
+    transform:rotate(2deg);
+    transition: all 0.3s ease;
+}
+
+.poll-container.even{
+    transform:rotate(-2deg);
+    transition: all 0.3s ease;
+}
+
+.poll-container:hover{
+    transform:rotate(0deg) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Form elements styling */
@@ -1193,6 +1221,19 @@ input[type="radio"]:focus + label {
     /*episodes page(s) */
     .activeDesc{
         max-width: 50ch;
+    }
+
+    /* Polls Page */
+
+    .poll-container{
+        scale:100%;
+        margin-bottom:50px;
+        width:60vw;
+    }
+
+    div#polls{
+        flex-flow: column nowrap;
+        justify-content:space-between;
     }
 }
 
@@ -1541,11 +1582,22 @@ and (max-width: 700px){
         padding-top:20px;
    }
 
+   /*
     .poll-container {
         padding: 15px;
         width:80vw;
     }
+   */
+   
+   .poll-container{
+        width:80vw;
+        scale:70%;
+        margin-top:-100px;
+   }
 
+   .poll-container.even{
+        margin-top:-300px;
+   }
     div#mediaContainer ul{
         margin:0;
         padding:0;

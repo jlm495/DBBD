@@ -28,9 +28,10 @@
         </ul>
     </nav>
 
-    <main>
+    <main id="pollMain">
         <h2>Polls</h2>
-        <div class="poll-container" role="region" aria-labelledby="poll-heading">
+        <div id="polls">
+        <div class="poll-container odd" role="region" aria-labelledby="poll-heading" class="odd">
             <h2 id="poll-heading" class="poll-heading">What kind of rider are you?</h2>
             
             <div id="already-voted-message" class="already-voted-message" role="alert">
@@ -80,7 +81,7 @@
                 <div id="results-container"></div>
             </div>
         </div>
-        <div class="poll-container" role="region" aria-labelledby="poll-heading1">
+        <div class="poll-container even" role="region" aria-labelledby="poll-heading1" class="even">
             <h2 id="poll-heading1" class="poll-heading">Which is your favorite brand?</h2>
             
             <div id="already-voted-message1" class="already-voted-message" role="alert">
@@ -140,7 +141,38 @@
                 <div id="results-container1"></div>
             </div>
         </div>
+        </div>
     </main>
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">Dirt Bike <span>Break Down</span></div>
+                    <div class="platform-links">
+                        <a href="https://open.spotify.com/show/4Fpg1l4D67FOJVjlNXO32m?si=690678a6f4f045a6" class="platform-button">
+                            <span class="platform-icon spotify-icon"></span>
+                            Spotify
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PL3F6BniSRAXVQ_MHfX1gR7gL_WYwXc7t0" class="platform-button">
+                            <span class="platform-icon youtube-icon"></span>
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Dirt Bike Break Down. All rights reserved.
+                </div>
+                
+                <div class="bottom-links">
+                    <a href="mailto:dirtbikebreakdown@gmail.com"><i class="far fa-envelope"></i> dirtbikebreakdown@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
