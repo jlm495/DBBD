@@ -976,10 +976,14 @@ legend {
     transition: background-color 0.2s;
 }
 
-.poll-option input[type="radio"]:checked + label, .poll-option:hover{
+.poll-option input[type="radio"]:checked + label{
     background:blueviolet;
     padding:12px;
     border-radius:12px;
+}
+
+.poll-option:hover{
+    font-size:larger;
 }
 
 .poll-option input[type="radio"] {
