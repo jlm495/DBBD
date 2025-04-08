@@ -552,6 +552,7 @@ ul#media{
     align-content:center;
     justify-self:center;
     align-self:center;
+    margin-bottom:100px;
 }
 
 div#episodesList{
@@ -1588,10 +1589,6 @@ and (max-width: 700px){
 
    .card{
     margin-top:100px;
-   }
-
-   main#episodesMain{
-    margin-bottom:100px;
    }
    
    .poll-container{
