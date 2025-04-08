@@ -976,7 +976,7 @@ legend {
     transition: background-color 0.2s;
 }
 
-.poll-option input[type="radio"]:checked + label{
+.poll-option input[type="radio"]:checked + label, .poll-option:hover{
     background:blueviolet;
     padding:12px;
     border-radius:12px;
