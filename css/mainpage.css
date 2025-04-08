@@ -917,6 +917,7 @@ div#polls{
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
+    margin-top:-75px;
 }
 .poll-container {
     border: 3px solid gray;
@@ -1239,6 +1240,8 @@ input[type="radio"]:focus + label {
     div#polls{
         flex-flow: column nowrap;
         justify-content:space-between;
+        margin:0;
+        margin-bottom:100px;
     }
 }
 
