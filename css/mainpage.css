@@ -983,7 +983,7 @@ legend {
 }
 
 .poll-option:hover{
-    font-size:larger;
+    transform:scale(1.03);
 }
 
 .poll-option input[type="radio"] {
