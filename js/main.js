@@ -3,7 +3,7 @@ Nav bar color wheel functionality, mobile menu toggle
 */
 document.addEventListener('DOMContentLoaded', function() {
     // Get elements
-    const navbar = document.querySelector('.navbar');
+    //const navbar = document.querySelector('.navbar');
     const toggleButton = document.getElementById('bgToggle');
     const menuButton = document.createElement('button');
     const pageBG = document.querySelector('body');
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentBg = parseInt(localStorage.getItem('navbarBackground')) || 0;
     
     // Apply saved background on page load
-    navbar.style.backgroundImage = backgrounds[currentBg];
+    //navbar.style.backgroundImage = backgrounds[currentBg];
     pageBG.style.backgroundImage = backgrounds[currentBg];
 
     toggleButton.addEventListener('click', function() {
         currentBg = (currentBg + 1) % backgrounds.length;
-        navbar.style.backgroundImage = backgrounds[currentBg];
+        //navbar.style.backgroundImage = backgrounds[currentBg];
         pageBG.style.backgroundImage = backgrounds[currentBg];
         // Save the choice
         localStorage.setItem('navbarBackground', currentBg);

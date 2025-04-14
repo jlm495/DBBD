@@ -11,8 +11,8 @@
 
 body{
     background:url(./img/DBBD_black_checker.jpg);
-    background-color: #ffffff99;
-    background-blend-mode: soft-light;
+    /*background-color: #ffffff99;
+    background-blend-mode: soft-light;*/
     display:grid;
 }
 
@@ -57,7 +57,7 @@ footer{
     grid-area:footy;
     width:1200px;
 }
-/* Simple Gray Footer Styles */
+
 .footer {
     background-color: black;
     color: white;
@@ -228,12 +228,14 @@ footer{
 }
 
 .bottom-links a:hover {
-    color: blueviolet;
+    color: white;
+    font-size: large;
 }
 
 .bottom-links a:hover::after {
     width: 100%;
 }
+
 h2{
     font-family:'Rubik Dirt';
     font-size:35pt;
@@ -243,10 +245,12 @@ h2{
     text-align:center;
     place-self:center;
 }
+
 .banner{
     width:1200px;
     margin:0;
 }
+
 body{
     font-family:'Oxygen';
     font-size: 15pt;
@@ -310,14 +314,15 @@ nav ul li{
 nav{
     width:1150px;
     height:50px;
-    background-image: url(./img/DBBD_black_checker.jpg);
+    /*background-image: url(./img/DBBD_black_checker.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
+    /*background: radial-gradient(black, white);*/
+    background:black;
     margin-top:-10px;
     margin-bottom:20px;
     border-radius:10px;
     text-align:center;
-    /*margin-left:-19px;*/
     box-shadow:0px 3px 0px, 0px 0px 7px black;
     grid-area:navvy;
     position:sticky;
@@ -346,7 +351,7 @@ nav ul li a{
     padding-bottom:0.25em;
     line-height:normal;
     font-family: 'Rubik Vinyl';
-    box-shadow: 0px 1px 0px, 0px 0px 7px black;
+    box-shadow: 0px 1px 0px, 0px 0px 7px white;
     border:1px solid white;
 }
 
@@ -500,6 +505,7 @@ div#mediaContainer{
     align-self:center;
     padding: 80px 100px;
     margin-bottom:30px;
+    margin-top:75px;
     
 }
 
@@ -815,10 +821,16 @@ ul#media li{
     padding: 0 10px;
 }
 
+ul#media li.space-left{
+    padding-left:10vw;
+}
+ul#media li.space-right{
+    padding-right:10vw;
+}
 ul#media{
     display:flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .icon{
@@ -1120,7 +1132,7 @@ input[type="radio"]:focus + label {
     display: none;
     background: #000;
     color: #fff;
-    border: none;
+    border: 2px solid white;
     border-radius: 5px;
     padding: 0.5rem 1rem;
     font-family: 'Oxygen', sans-serif;
@@ -1586,9 +1598,24 @@ and (max-width: 700px){
         padding-right:10px;
     }
 
-   #episodesHeader{
+    
+    ul#media li.space-left{
+        padding-left:0vw;
+        font-size:small;
+    }
+
+    ul#media li.space-right{
+        padding-right:0vw;
+        font-size:small;
+    }
+
+    .icon{
+        width:35px;
+    }
+
+   /*#episodesHeader{
         padding-top:20px;
-   }
+   }*/
 
    .card{
     margin-top:100px;
@@ -1626,4 +1653,5 @@ and (max-width: 700px){
     .bottom-links {
         justify-content: center;
     }
+
 }
