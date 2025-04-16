@@ -252,7 +252,7 @@ h2{
 }
 
 body{
-    font-family:'Averia Sans Libre', monospace;
+    font-family:'Averia Sans Libre';
     font-size: 19pt;
 }
 
@@ -490,7 +490,7 @@ div.bios p{
 
 div#mediaContainer{
     color:white;
-    font-family:"Oxygen";
+    font-family:'Averia Sans Libre';
     text-align:center;
     background-image:url("../img/episodesBG.svg");
     background-size: contain;
@@ -549,7 +549,7 @@ ul#media{
 }
 
 .activeDesc{
-    font-size:15pt;
+    font-size:17pt;
 }
 
 #episodesMain{
@@ -872,8 +872,9 @@ div#skips-container{
     flex-flow: row nowrap;
 }
 .skip-text{
-    font-family:'Oxygen';
-    font-size:18pt;
+    font-family:'Averia Sans Libre';
+    font-size:24pt;
+    text-align:center;
 }
 
 img.skip-thumb{
@@ -1125,7 +1126,7 @@ input[type="radio"]:focus + label {
     border: 2px solid white;
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    font-family: 'Oxygen', sans-serif;
+    font-family:'Averia Sans Libre';
     font-weight: 700;
     cursor: pointer;
     z-index: 100;
