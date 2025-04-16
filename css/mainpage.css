@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fredericka+the+Great&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oxygen:wght@300;400;700&family=Rubik+Dirt&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Delicious+Handrawn&family=Oxygen:wght@300;400;700&family=Rubik+Dirt&family=Rubik+Vinyl&display=swap');
 
 /* Animation for logo */
 @keyframes revEngine {
@@ -252,8 +252,8 @@ h2{
 }
 
 body{
-    font-family:'Oxygen';
-    font-size: 15pt;
+    font-family:'Averia Sans Libre', monospace;
+    font-size: 17pt;
 }
 
 .skip-link {
@@ -424,8 +424,8 @@ main.noAsides{
 }
 
 p#pitch{
-    margin-bottom:80px;
-    width:70ch;
+    margin-bottom:30px;
+    width:60ch;
     place-self:center;
     text-align:justify;
     line-height: 25px;
