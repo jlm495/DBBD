@@ -812,10 +812,10 @@ ul#media li{
 }
 
 ul#media li.space-left{
-    padding-left:10vw;
+    padding-left:100px;
 }
 ul#media li.space-right{
-    padding-right:10vw;
+    padding-right:100px;
 }
 ul#media{
     display:flex;
@@ -1441,6 +1441,12 @@ and (max-width: 1050px){
         padding: 1vw;
         width:min-content;
         border-radius:12px;
+    }
+    ul#media li.space-left{
+        padding-left:10vw;
+    }
+    ul#media li.space-right{
+        padding-right:10vw;
     }
 
     div#mediaContainer, iframe, .activeDescTitle{
