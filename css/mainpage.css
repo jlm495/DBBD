@@ -253,7 +253,7 @@ h2{
 
 body{
     font-family:'Averia Sans Libre', monospace;
-    font-size: 17pt;
+    font-size: 19pt;
 }
 
 .skip-link {
@@ -461,24 +461,27 @@ figure img.headshot{
     place-self:center;
 }
 
+
 div.bios{
     display:flex;
     flex-direction: row;
     justify-content:space-around;
-    border: 3px solid black;
+    border: 3px solid gray;
     border-radius:12px;
-    padding:0px 30px;
+    padding-right:40px;
+    padding-bottom:0px;
     margin-bottom:50px;
     background:black;
     color:white;
 }
+
 div.bios:hover{
     box-shadow:10px 10px 10px darkgray;
     transform: translateY(-10px) rotate(-1deg);
 }
 
 div.bios p{
-    width:40ch;
+    width:34ch;
     text-align:justify;
     place-self:center;
 }
@@ -656,21 +659,6 @@ div#episodesList{
     margin-top:-10px;
     color:white;
     font-weight:normal;
-}
-/*
-.episode-title a {
-    color: #fff;
-    text-decoration: none;
-    display: inline;
-    background-image: linear-gradient(transparent calc(100% - 3px), #444 3px);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    transition: background-size 0.3s;
-}
-*/
-.episode-title a:hover {
-    background-size: 100% 100%;
-    color:blueviolet;
 }
 
 /* Meta information */
@@ -1477,9 +1465,40 @@ and (max-width: 1050px){
     img.skip-thumb{
         width:30vw;
     }
+
+    p#pitch{
+        text-align:center;
+    }
+
+    div.bios{
+        width:80vw;
+        padding:0;
+        padding-top:30px;
+        padding-bottom:30px;
+        place-self:center;
+    }
+
+    div.bios p{
+        width:75vw;
+        text-align:center;
+        padding-top:15px;
+    }
+
+    figure img.headshot, img, figure, figure#us, figure img#us{
+        width:70vw;
+        padding:0;
+        place-self:center;
+        margin:0;
+    }
+
+    figure#us{
+        margin-bottom:50px;
+    }
+
+
 }
 @media screen
-and (max-width: 700px){
+and (max-width: 450px){
 
     #episodesContainer{
         margin:0;
@@ -1498,6 +1517,7 @@ and (max-width: 700px){
 
     p#pitch{
         text-align:center;
+        font-size:17pt;
     }
     div.bios{
         width:80vw;
@@ -1508,9 +1528,9 @@ and (max-width: 700px){
     }
 
     div.bios p{
-        width:70vw;
+        width:75vw;
         text-align:center;
-        padding-top:30px;
+        padding-top:15px;
         font-size:12pt;
     }
 
