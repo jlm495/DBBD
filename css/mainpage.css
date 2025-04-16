@@ -824,7 +824,7 @@ ul#media{
 }
 
 .icon{
-    width:40px;
+    width:60px;
 }
 
 .icon:hover{
@@ -1431,11 +1431,6 @@ and (max-width: 1050px){
     p#pitch{
         width:80vw;
     }
-    
-}
-
-@media screen
-and (max-width: 1050px){
     .card{
         margin:30px;
     }
@@ -1452,10 +1447,10 @@ and (max-width: 1050px){
     }
 
     .icon{
-        width:50px;
+        width:70px;
     }
-
 }
+
 @media screen and (max-width: 850px){
     div#prev, div#next{
         width:30vw;
@@ -1496,6 +1491,39 @@ and (max-width: 1050px){
     }
 
 
+}
+@media screen
+and (max-width: 680px){
+    
+
+    div#mediaContainer ul li{
+        place-self:center;
+    }
+
+    ul#media li.space-left{
+        padding:0;
+    }
+
+    ul#media li.space-right{
+        padding:0;
+    }
+}
+
+@media screen
+and (max-width: 680px){
+    div#mediaContainer ul#media{
+        flex-direction: column;
+    }
+
+    
+    ul#media li.space-left{
+        margin-top:5px;
+    }
+
+    ul#media li.space-right{
+        margin-bottom:5px;
+        margin-top:10px;
+    }
 }
 @media screen
 and (max-width: 450px){
@@ -1618,21 +1646,6 @@ and (max-width: 450px){
     .episodeDesc{
         margin-bottom:100px;
         padding-right:10px;
-    }
-
-    
-    ul#media li.space-left{
-        padding-left:0vw;
-        font-size:small;
-    }
-
-    ul#media li.space-right{
-        padding-right:0vw;
-        font-size:small;
-    }
-
-    .icon{
-        width:35px;
     }
 
    /*#episodesHeader{
