@@ -1443,8 +1443,12 @@ and (max-width: 1050px){
         border-radius:12px;
     }
 
-    div#mediaContainer, iframe, .activeDescTitle, .activeDesc{
-    max-width:80vw;
+    div#mediaContainer, iframe, .activeDescTitle{
+        max-width:80vw;
+    }
+
+    .activeDesc{
+        max-width:70vw;
     }
 
     .icon{
