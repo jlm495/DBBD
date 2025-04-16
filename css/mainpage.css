@@ -314,10 +314,6 @@ nav ul li{
 nav{
     width:1150px;
     height:50px;
-    /*background-image: url(./img/DBBD_black_checker.jpg);
-    background-size: cover;
-    background-position: center;*/
-    /*background: radial-gradient(black, white);*/
     background:black;
     margin-top:-10px;
     margin-bottom:20px;
@@ -487,6 +483,20 @@ div.bios p{
 }
 
 /* Episodes page */
+
+.back{
+    color:black;
+    margin-top:20px;
+    margin-bottom:-20px;
+}
+
+.back img{
+    width:30px;
+}
+
+.back:hover{
+    font-size:larger;
+}
 
 div#mediaContainer{
     color:white;
