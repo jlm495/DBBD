@@ -1292,7 +1292,7 @@ input[type="radio"]:focus + label {
     max-height: 80vh;
     display: block;
     border: 3px solid white;
-}
+} 
 
 .lightbox-caption {
     position: absolute;
@@ -1350,6 +1350,14 @@ input[type="radio"]:focus + label {
 
 .lightbox-next {
     right: 20px;
+}
+
+.strayImages img{
+    max-width:60vw;
+}
+
+.strayImages img#tripod{
+    max-width:30vw;
 }
 
 /* Responsive adjustments */
