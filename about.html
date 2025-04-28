@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dirt Bike Break Down - Home</title>
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/mainpage.css" rel="stylesheet">
+    <script src="./js/main.js" defer></script>
+    <script src="./js/gallery.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="container">
+    <header>
+        <h1 class="sr-only">Dirt Bike Break Down Main Page</h1>
+        <span aria-hidden=true>
+            <img src="./img/DBBDbwBanner.svg" class="banner" id="bannerMain" alt="banner with free body diagram and dirt bikes">
+        </span>
+    </header>
+
+    <nav class="navbar" id="navbar">
+        <h2 class="sr-only">Main navigation</h2>
+        <button id="bgToggle" aria-label="Toggle navigation bar colors"><img src="./img/colorWheel.png" alt="colorful dirt bike wheel"></button>
+        <ul>
+            <li class="pages"><a href="./index.html">Home</a></li>
+            <li class="pages"><a href="./episodes.html">Episodes</a></li>
+            <li class="pages"><a href="./polls.html">More Fun</a></li>
+            <li><a href="./about.html" class="currentPage">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="noAsides" id="main-content">
+        <section id="motivation">
+            <h2>Motivation</h2>
+            <p>Describe the inspiration behind the project, what the objective was going in, what the most important aspects/goals were</p>
+        </section>
+        <section id="dev-design">
+            <h2>Development & Design</h2>
+            <div class="gallery-container">
+                <h3 class="gallery-title">Main Page Iterations</h3>
+                
+                <div class="gallery-grid" id="main-gallery">
+                    <figure class="gallery-item">
+                        <img src="./img/mainIt1.png" alt="site main page with white background, checkered navbar, blue buttons, left-aligned content">
+                        <figcaption class="caption">Iteration 1 of Dirt Bike Break Down Main Page</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/mainIt2.png" alt="site main page with black background, checkered navbar, color wheel, black and white buttons">
+                        <figcaption class="caption">Iteration 2 of Dirt Bike Break Down Main Page</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/mainIt3.png" alt="site main page with black background, checkered navbar, color wheel, black and white buttons">
+                        <figcaption class="caption">Iteration 3 of Dirt Bike Break Down Main Page</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/mainIt4.png" alt="site main page with black background, checkered navbar, color wheel, black and white buttons">
+                        <figcaption class="caption">Iteration 4 of Dirt Bike Break Down Main Page</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <p>Describe user testing process, intentions behind ideas.</p>
+
+        <!-- Second Gallery: Episode List Iterations -->
+        <div class="gallery-container">
+            <h3 class="gallery-title">Episodes List Page Iterations</h3>
+            
+            <div class="gallery-grid" id="list-gallery">
+                <figure class="gallery-item">
+                    <img src="./img/listIt1.png" alt="">
+                    <figcaption class="caption">Iteration 1 of Episodes List Page</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt2.png" alt="">
+                    <figcaption class="caption">Iteration 2 of Episodes List Page</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt3.png" alt="">
+                    <figcaption class="caption">Iteration 3 Episodes List Page</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt4.png" alt="">
+                    <figcaption class="caption">Iteration 4 Episodes List Page</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt5.png" alt="">
+                    <figcaption class="caption">Iteration 5 of Episodes List Page</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt6.png" alt="">
+                    <figcaption class="caption">Iteration 6 of Episodes List Page</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt7.png" alt="">
+                    <figcaption class="caption">Iteration 7 of Episodes List Page for Desktop</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt7mobile.jpg" alt="">
+                    <figcaption class="caption">Iteration 7 of Episodes List Page for Mobile</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt8.png" alt="">
+                    <figcaption class="caption">Iteration 8 of Episodes List Page for Desktop</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="./img/listIt8mobile.png" alt="">
+                    <figcaption class="caption">Iteration 8 Episodes List Page for Mobile</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+        <!-- One shared lightbox for all galleries -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <img src="" alt="" class="lightbox-img" id="lightbox-img">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+            </div>
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&lt;</button>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next">&gt;</button>
+        </div>
+            <p>Describe user testing process, intentions behind ideas.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text">Dirt Bike <span>Break Down</span></div>
+                    <div class="platform-links">
+                        <a href="https://open.spotify.com/show/4Fpg1l4D67FOJVjlNXO32m?si=690678a6f4f045a6" class="platform-button">
+                            <span class="platform-icon spotify-icon"></span>
+                            Spotify
+                        </a>
+                        <a href="https://www.youtube.com/playlist?list=PL3F6BniSRAXVQ_MHfX1gR7gL_WYwXc7t0" class="platform-button">
+                            <span class="platform-icon youtube-icon"></span>
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2025 Dirt Bike Break Down. All rights reserved.
+                </div>
+                
+                <div class="bottom-links">
+                    <a href="mailto:dirtbikebreakdown@gmail.com"><i class="far fa-envelope"></i> dirtbikebreakdown@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div> 
+</body>
+</html>
