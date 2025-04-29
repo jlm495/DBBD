@@ -1206,6 +1206,8 @@ input[type="radio"]:focus + label {
     margin-bottom: 30px;
     color: #333;
     font-family: 'Delicious Handrawn', cursive;
+    font-size: 36pt;
+    font-weight:normal;
 }
 
 /* Thumbnail Grid */
@@ -1360,6 +1362,17 @@ input[type="radio"]:focus + label {
     max-width:30vw;
 }
 
+#github a:link{
+    text-decoration-style:dashed;
+}
+#github a:hover{
+    text-decoration-style:solid;
+    font-size:larger;
+}
+#github a{
+    color:black;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gallery-item {
@@ -1410,7 +1423,9 @@ input[type="radio"]:focus + label {
     }
 
     p{
-        max-width:90vw;
+        max-width:80vw;
+        place-self:center;
+        text-align: center;
     }
 
     /*episodes page(s) */
@@ -1707,7 +1722,9 @@ and (max-width: 1050px){
 @media screen
 and (max-width: 680px){
     
-
+    .lightbox-caption{
+        font-size:12pt;
+    }
     div#mediaContainer ul li{
         place-self:center;
     }
