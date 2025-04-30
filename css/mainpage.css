@@ -1423,7 +1423,7 @@ input[type="radio"]:focus + label {
     }
 
     p{
-        max-width:80vw;
+        max-width:70ch;
         place-self:center;
         text-align: center;
     }
