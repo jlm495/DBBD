@@ -1195,6 +1195,10 @@ input[type="radio"]:focus + label {
 
 /* About Page */
 
+iframe{
+    place-self:center;
+    max-width:75vw;
+}
 .gallery-container {
     max-width: 1200px;
     margin: 0 auto;
