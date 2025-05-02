@@ -418,7 +418,7 @@ main.noAsides{
     margin-bottom:50px;
 }
 
-p#pitch{
+p.pitch{
     margin-bottom:30px;
     width:60ch;
     place-self:center;
@@ -1377,11 +1377,6 @@ iframe{
     color:black;
 }
 
-p{
-    width:70ch;
-    place-self:center;
-}
-
 p.activeDesc{
     width:50ch;
 }
@@ -1632,7 +1627,7 @@ and (max-width: 1050px){
         margin:0;
     }
 
-    p#pitch{
+    p.pitch{
         width:80vw;
     }
     .card{
@@ -1675,7 +1670,7 @@ and (max-width: 1050px){
         width:30vw;
     }
 
-    p#pitch{
+    p.pitch{
         text-align:center;
     }
 
@@ -1783,7 +1778,7 @@ and (max-width: 450px){
         align-self:center;
     }
 
-    p#pitch{
+    p.pitch{
         text-align:center;
         font-size:17pt;
     }
