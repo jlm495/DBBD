@@ -1377,6 +1377,15 @@ iframe{
     color:black;
 }
 
+p{
+    width:70ch;
+    place-self:center;
+}
+
+p.activeDesc{
+    width:50ch;
+}
+
 /* Responsive adjustments */
 
 @media screen and (max-width:1280px){
