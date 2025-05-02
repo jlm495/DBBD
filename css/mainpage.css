@@ -1374,17 +1374,6 @@ input[type="radio"]:focus + label {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery-item {
-        flex: 0 0 calc(50% - 15px); /* On medium screens, 2 items per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-item {
-        flex: 0 0 100%; /* On small screens, 1 item per row */
-    }
-}
 
 @media screen and (max-width:1280px){
     
@@ -1422,12 +1411,6 @@ input[type="radio"]:focus + label {
         max-width:90vw;
     }
 
-    p{
-        max-width:70ch;
-        place-self:center;
-        text-align: center;
-    }
-
     /*episodes page(s) */
     .activeDesc{
         max-width: 50ch;
@@ -1446,6 +1429,12 @@ input[type="radio"]:focus + label {
         justify-content:space-between;
         margin:0;
         margin-bottom:100px;
+    }
+
+    p{
+        max-width:75vw;
+        place-self:center;
+        text-align: center;
     }
 }
 
@@ -1718,7 +1707,11 @@ and (max-width: 1050px){
     }
 
 }
-
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 15px); /* On medium screens, 2 items per row */
+    }
+}
 @media screen
 and (max-width: 680px){
     
@@ -1752,6 +1745,11 @@ and (max-width: 680px){
     ul#media li.space-right{
         margin-bottom:5px;
         margin-top:10px;
+    }
+}
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 0 0 100%; /* On small screens, 1 item per row */
     }
 }
 @media screen
